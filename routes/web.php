@@ -12,7 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::get('token', function (){
+    return csrf_token();
 });
+Route::get('/', 'TimestampController@index');
+Route::post('/date', 'TimestampController@getDateFromTimestamp');
+Route::post('/timestamp', 'TimestampController@getTimestampFromDate');
+Route::post('/time-stamp', 'TimestampController@getTimestampFromHumanDate');
