@@ -27,8 +27,6 @@
 </form>
 <br>
 <br>
-<br>
-<br>
 <form method="POST" action="/timestamp">
     @csrf
     <div>
@@ -41,11 +39,11 @@
             </tr>
             <tr>
                 <td>
-                    <input type="text" name="year" size="4" maxlength="4">
+                    <input type="text" name="yr" size="4" maxlength="4">
                     <span>-</span>
                 </td>
                 <td>
-                    <input type="text" name="month" size="2" maxlength="2">
+                    <input type="text" name="mon" size="2" maxlength="2">
                     <span>-</span>
                 </td>
                 <td>
@@ -76,21 +74,21 @@
             </tr>
             </tbody>
         </table>
-        <select name = timezone>
-            <option value="gmt">GMT</option>
+        <select name=tz>
+            <option value="gmt" selected>GMT</option>
             <option value="local">Local</option>
         </select>
         <button type="submit">Human Date to Timestamp</button>
     </div>
 
-    @if ($errors->any())
+    @if ($errors->hasAny(['yr', 'mon', 'day', 'hr', 'min', 'sec', 'tz']))
         <ul>
             <li>{{ $errors->first() }}</li>
         </ul>
     @endif
 
     @if (isset($stamp))
-        <p>Epoch Timestamp  : {{ $stamp }}</p>
+        <p>Epoch Timestamp : {{ $stamp }}</p>
         <p>Timestamp in milliseconds: {{ $stamp*1000 }}</p>
         <p>Date and Time (GMT) : {{$gmt}}</p>
         <p>Date and Time (Your Timezone) : {{$local}}</p>
@@ -98,17 +96,15 @@
 </form>
 <br>
 <br>
-<br>
-<br>
 <form method="POST" action="/time-stamp">
     @csrf
-    <input type="text" name="date" value="@if(isset($humanDate)) {{$humanDate}} @endif">
+    <input type="text" name="date" size="30" value="@if(isset($humanDate)) {{$humanDate}} @endif">
     <button type="submit">Human Date to Timestamp</button>
     @if (isset($error))
         <p> {{ $error }}</p>
     @endif
     @if (isset($stamp1))
-        <p>Epoch Timestamp  : {{ $stamp1 }}</p>
+        <p>Epoch Timestamp : {{ $stamp1 }}</p>
         <p>Timestamp in milliseconds: {{ $stamp1*1000 }}</p>
         <p>Date and Time (GMT) : {{$gmt1}}</p>
         <p>Date and Time (Your Timezone) : {{$local1}}</p>
@@ -116,26 +112,117 @@
 </form>
 <br>
 <br>
-<br>
-<br>
 <h1>Epoch Dates for the start and end of year/month/day</h1>
 <form method="POST" action="/dates">
     @csrf
-    <input type="radio" name="date" value="year">
+    <input type="radio" name="format" value="year">
     <label for="year">Year</label>
-    <input type="radio" name="date" value="month">
+    <input type="radio" name="format" checked value="month">
     <label for="month">Month</label>
-    <input type="radio" name="date" value="day">
+    <input type="radio" name="format" value="day">
     <label for="day">Day</label>
     <br>
-    <input type="text" name="year" size="4" maxlength="4">-
-    <input type="text" name="month" size="2" maxlength="2">-
-    <input type="text" name="day" size="2" maxlength="2">
-    <select name = timezone>
-        <option value="gmt">GMT</option>
+    <div>
+        <table>
+            <tbody>
+            <tr>
+                <td>Yr</td>
+                <td>Mon</td>
+                <td>Day</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="year" size="4" maxlength="4">
+                    <span>-</span>
+                </td>
+                <td>
+                    <input type="text" name="month" size="2" maxlength="2">
+                    <span>-</span>
+                </td>
+                <td>
+                    <input type="text" name="Day" size="2" maxlength="2">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <select name=timezone>
+        <option value="gmt" selected>GMT</option>
         <option value="local">Local</option>
     </select>
     <button type="submit">Convert</button>
+
+    @if ($errors->hasAny(['format', 'year', 'month', 'Day', 'timezone']))
+        <ul>
+            <li>{{ $errors->first() }}</li>
+        </ul>
+    @endif
+
+    @if(isset($format))
+        @if ($format == 'year'))
+        <table border="1px solid black">
+            <tbody>
+            <tr>
+                <td></td>
+                <td>Epoch</td>
+                <td>Date and Time</td>
+            </tr>
+            <tr>
+                <td>Start of Year</td>
+                <td>{{$startTimestamp}}</td>
+                <td>{{ $startDate }}</td>
+            </tr>
+            <tr>
+                <td>End of Year</td>
+                <td>{{$endTimestamp}}</td>
+                <td>{{ $endDate }}</td>
+            </tr>
+            </tbody>
+        </table>
+        @elseif ($format == 'month')
+            <table border="1px solid black">
+                <tbody>
+                <tr>
+                    <td></td>
+                    <td>Epoch</td>
+                    <td>Date and Time</td>
+                </tr>
+                <tr>
+                    <td>Start of Month</td>
+                    <td>{{$startTimestamp}}</td>
+                    <td>{{ $startDate }}</td>
+                </tr>
+                <tr>
+                    <td>End of Month</td>
+                    <td>{{$endTimestamp}}</td>
+                    <td>{{ $endDate }}</td>
+                </tr>
+                </tbody>
+            </table>
+        @elseif($format == 'day')
+            <table border="1px solid black">
+                <tbody>
+                <tr>
+                    <td></td>
+                    <td>Epoch</td>
+                    <td>Date and Time</td>
+                </tr>
+                <tr>
+                    <td>Start of Day</td>
+                    <td>{{$startTimestamp}}</td>
+                    <td>{{ $startDate }}</td>
+                </tr>
+                <tr>
+                    <td>End of Day</td>
+                    <td>{{$endTimestamp}}</td>
+                    <td>{{ $endDate }}</td>
+                </tr>
+                </tbody>
+            </table>
+        @endif
+    @endif
 </form>
+<br>
+<br>
 </body>
 </html>
