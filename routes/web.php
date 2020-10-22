@@ -12,10 +12,24 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('token', function (){
-    return csrf_token();
-});
-Route::get('/', 'TimestampController@index');
+Route::get('/', 'TimestampController@index')->name('home');
+
 Route::post('/date', 'TimestampController@getDateFromTimestamp');
+Route::get('/date', function () {
+    return redirect()->route('home');
+});
+
 Route::post('/timestamp', 'TimestampController@getTimestampFromDate');
+Route::get('/timestamp', function () {
+    return redirect()->route('home');
+});
+
 Route::post('/time-stamp', 'TimestampController@getTimestampFromHumanDate');
+Route::get('/time-stamp', function () {
+    return redirect()->route('home');
+});
+
+Route::post('/dates', 'TimestampController@getFirstAndLastOfInterval');
+Route::get('/dates', function () {
+    return redirect()->route('home');
+});
