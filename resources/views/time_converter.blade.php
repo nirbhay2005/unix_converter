@@ -83,7 +83,7 @@
 
     @if ($errors->hasAny(['yr', 'mon', 'day', 'hr', 'min', 'sec', 'tz']))
         <ul>
-            <li>{{ $errors->first() }}</li>
+            <li>{{ $errors->first() }}
         </ul>
     @endif
 
@@ -180,7 +180,7 @@
             </tbody>
         </table>
         @elseif ($format == 'month')
-            <table border="1px solid black">
+            <table border="1px solid black style=">
                 <tbody>
                 <tr>
                     <td></td>
