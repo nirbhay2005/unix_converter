@@ -7,7 +7,9 @@
 <body>
 <h1>Epoch Converter</h1>
 <body>
-<p id="time"></p>
+<label>The current Unix Epoch time is
+    <output id="time"></output>
+</label>
 </body>
 
 <h3>Timestamp to Date Converter</h3>
