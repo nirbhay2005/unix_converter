@@ -12,24 +12,24 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'TimestampController@index')->name('home');
+Route::get('/', 'EpochController@index')->name('home');
 
-Route::post('/date', 'TimestampController@getDateFromTimestamp');
+Route::post('/date', 'EpochController@getDateFromTimestamp');
 Route::get('/date', function () {
     return redirect()->route('home');
 });
 
-Route::post('/timestamp', 'TimestampController@getTimestampFromDate');
+Route::post('/timestamp', 'EpochController@getTimestampFromDate');
 Route::get('/timestamp', function () {
     return redirect()->route('home');
 });
 
-Route::post('/time-stamp', 'TimestampController@getTimestampFromHumanDate');
+Route::post('/time-stamp', 'EpochController@getTimestampFromHumanDate');
 Route::get('/time-stamp', function () {
     return redirect()->route('home');
 });
 
-Route::post('/dates', 'TimestampController@getFirstAndLastOfInterval');
+Route::post('/dates', 'EpochController@getFirstAndLastOfInterval');
 Route::get('/dates', function () {
     return redirect()->route('home');
 });
