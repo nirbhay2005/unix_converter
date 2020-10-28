@@ -1,17 +1,23 @@
 <?php
 
-
 namespace App\Http\Requests;
 
+use Illuminate\Foundation\Http\FormRequest;
 
-use Luezoid\Laravelcore\Requests\BaseRequest;
-
-class TimestampToDateRequest extends BaseRequest
+class TimestampToDateRequest extends FormRequest
 {
     public function rules()
     {
         return [
-            'timeStamp' => 'required|integer|digits_between:1,13',
+            'timestamp' => 'bail|required|integer|digits_between:1,13',
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'timestamp.integer' => 'Invalid Timestamp',
+            'timestamp.digits_between' => 'Invalid Timestamp'
         ];
     }
 }
