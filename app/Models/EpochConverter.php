@@ -44,22 +44,21 @@ class EpochConverter
     public function getFirstAndLastOfInterval($params)
     {
         $tz = $params['timezone'] == 'local' ? null : $params['timezone'];
-
         switch ($params['format']) {
             case 'year' :
-                $date = Carbon::create($year = $params['year'], $month = 1, $day = 1, $hour = 0, $minute = 0, $second = 0, $tz);
-                $start = Carbon::parse($date)->startOfYear();
-                $end = Carbon::parse($date)->endOfYear();
+                $date = $params['date'];
+                $start = Carbon::parse($date, $tz)->startOfYear();
+                $end = Carbon::parse($date, $tz)->endOfYear();
                 break;
             case 'month' :
-                $date = Carbon::create($year = $params['year'], $month = $params['month'], $day = 1, $hour = 0, $minute = 0, $second = 0, $tz);
-                $start = Carbon::parse($date)->startOfMonth();
-                $end = Carbon::parse($date)->endOfMonth();
+                $date = $params['date'];
+                $start = Carbon::parse($date, $tz)->startOfMonth();
+                $end = Carbon::parse($date, $tz)->endOfMonth();
                 break;
             case 'day' :
-                $date = Carbon::create($year = $params['year'], $month = $params['month'], $day = $params['day'], $hour = 0, $minute = 0, $second = 0, $tz);
-                $start = Carbon::parse($date)->startOfDay();
-                $end = Carbon::parse($date)->endOfDay();
+                $date = $params['date'];
+                $start = Carbon::parse($date, $tz)->startOfDay();
+                $end = Carbon::parse($date, $tz)->endOfDay();
                 break;
         }
         return [
