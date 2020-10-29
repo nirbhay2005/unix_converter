@@ -6,7 +6,12 @@
 </head>
 <body>
 <h1>Epoch Converter</h1>
-<br>
+<body>
+<label>The current Unix Epoch time is
+    <output id="time"></output>
+</label>
+</body>
+
 <h3>Timestamp to Date Converter</h3>
 <form name="timestampToDate" method="POST" action="/date">
     @csrf
@@ -159,5 +164,21 @@
 </form>
 <br>
 <br>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+    var timestamp = '<?=time();?>';
+
+    function updateTime() {
+        $('#time').html((timestamp));
+        timestamp++;
+    }
+
+    $(function () {
+        setInterval(updateTime, 1000);
+    });
+</script>
+
 </body>
 </html>
+
