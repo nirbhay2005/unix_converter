@@ -13,7 +13,7 @@
 </body>
 
 <h3>Timestamp to Date Converter</h3>
-<form method="POST" action="/date">
+<form name="timestampToDate" method="POST" action="/date">
     @csrf
     <input type="text" name="timestamp" value="{{\Carbon\Carbon::now('GMT')->getTimestamp()}}">
     <button type="submit">Timestamp to Date</button>
@@ -33,7 +33,7 @@
 <br>
 <br>
 <h3>Date to Timestamp Converter</h3>
-<form method="POST" action="/timestamp">
+<form name="dateToTimestamp" method="POST" action="/timestamp">
     @csrf
     <input type="datetime-local" step="1" name="date" value="{{\Carbon\Carbon::now('GMT')->toDateTimeLocalString()}}">
     <select name=tz>
@@ -51,7 +51,7 @@
 <br>
 <br>
 <h3>Human Date to Timestamp Converter</h3>
-<form method="POST" action="/time-stamp">
+<form name="humanToTimestamp" method="POST" action="/time-stamp">
     @csrf
     <input type="text" name="date" size="30" value="{{\Carbon\Carbon::now('GMT')->toCookieString()}}">
     <button type="submit">Human Date to Timestamp</button>
@@ -62,7 +62,7 @@
 <br>
 <br>
 <h1>Epoch Dates for the start and end of year/month/day</h1>
-<form method="POST" action="/dates">
+<form name="beginEnd" method="POST" action="/dates">
     @csrf
     <input type="radio" name="format" value="year">
     <label for="year">Year</label>
