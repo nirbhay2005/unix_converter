@@ -6,70 +6,40 @@ use App\Http\Requests\DateToTimestampRequest;
 use App\Http\Requests\FirstAndLastDateRequest;
 use App\Http\Requests\TimestampToDateRequest;
 use App\Models\EpochConverter;
-use Carbon\Carbon;
-use Exception;
+use App\Repositories\EpochRepository;
 use Illuminate\Http\Request;
+use Luezoid\Laravelcore\Http\Controllers\ApiController;
+use Luezoid\Laravelcore\Jobs\BaseJob;
 
-class EpochController extends Controller
+class EpochController extends ApiController
 {
-    public function index()
+    protected $repository = EpochRepository::class;
+
+    public function getDateFromTimestamp(Request $request)
     {
-        return view('home');
+        $this->jobMethod = 'getDateFromTimestamp';
+        $this->customRequest = TimestampToDateRequest::class;
+        return $this->handleCustomEndPoint(BaseJob::class, $request);
     }
 
-    public function getDateFromTimestamp(TimestampToDateRequest $request, EpochConverter $converter)
+    public function getTimestampFromDate(Request $request)
     {
-        $validated = $request->validated();
-        $timeStamp = $validated['timestamp'];
-        $result = $converter->getDateFromTimestamp($timeStamp);
-
-        return view('epoch_converter', [
-            'timestamp' => $timeStamp,
-            'date' => $result,
-        ]);
+        $this->jobMethod = 'getTimestampFromDate';
+        $this->customRequest = DateToTimestampRequest::class;
+        return $this->handleCustomEndPoint(BaseJob::class, $request);
     }
 
-    public function getTimestampFromDate(DateToTimestampRequest $request, EpochConverter $converter)
+    public function getTimestampFromHumanDate(Request $request)
     {
-        $validated = $request->validated();
-        $result['timestamp'] = $converter->getTimestampFromDate($validated['date'], $validated['tz']);
-        $result += $converter->getDateFromTimestamp($result['timestamp']);
-
-        return view('epoch_converter', [
-            'stamp' => $result['timestamp'],
-            'gmt' => $result['gmt'],
-            'local' => $result['local']
-        ]);
-    }
-
-    public function getTimestampFromHumanDate(Request $request, EpochConverter $converter)
-    {
-        try {
-            $result['timestamp'] = $converter->getTimestampFromDate(Carbon::parse($request->input('date') ?? 'null'), 'UTC');
-        } catch (Exception $e) {
-            return view('home', [
-                'message' => 'Sorry, Can\'t parse this date'
-            ]);
-        }
-        $result += $converter->getDateFromTimestamp($result['timestamp']);
-
-        return view('epoch_converter', [
-            'stamp1' => $result['timestamp'],
-            'gmt1' => $result['gmt'],
-            'local1' => $result['local'],
-            'humanDate' => $request->input('date')
-        ]);
+        $this->jobMethod = 'getTimestampFromHumanDate';
+        return $this->handleCustomEndPoint(BaseJob::class, $request);
     }
 
     public function getFirstAndLastOfInterval(FirstAndLastDateRequest $request, EpochConverter $converter)
     {
-        $result = $converter->getFirstAndLastOfInterval($request->validated());
-        return view('epoch_converter', [
-            'format' => $request->input('format'),
-            'startDate' => $result['start_date'],
-            'startTimestamp' => $result['start_timestamp'],
-            'endDate' => $result['end_date'],
-            'endTimestamp' => $result['end_timestamp']
-        ]);
+
+        $this->jobMethod = 'getFirstAndLastOfInterval';
+        $this->customRequest = FirstAndLastDateRequest::class;
+        return $this->handleCustomEndPoint(BaseJob::class, $request);
     }
 }
