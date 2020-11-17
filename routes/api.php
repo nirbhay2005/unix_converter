@@ -24,6 +24,6 @@ Route::post('/date', 'EpochController@getDateFromTimestamp');
 
 Route::post('/timestamp', 'EpochController@getTimestampFromDate');
 
-Route::post('/time-stamp', 'EpochController@getTimestampFromHumanDate');
+Route::post('/timestamp-human', 'EpochController@getTimestampFromHumanDate');
 
-Route::post('/dates', 'EpochController@getFirstAndLastOfInterval');
+Route::post('/begin-end', 'EpochController@getBeginEndOfInterval');
