@@ -19,3 +19,11 @@ Route::middleware(['auth:api'])->group(function () {
     // All routes here are protected
     Route::get('users', 'UserController@index');
 });
+
+Route::post('/date', 'EpochController@getDateFromTimestamp');
+
+Route::post('/timestamp', 'EpochController@getTimestampFromDate');
+
+Route::post('/time-stamp', 'EpochController@getTimestampFromHumanDate');
+
+Route::post('/dates', 'EpochController@getFirstAndLastOfInterval');
