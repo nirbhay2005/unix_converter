@@ -6,7 +6,7 @@ namespace App\Http\Requests;
 use Illuminate\Validation\Rule;
 use Luezoid\Laravelcore\Requests\BaseRequest;
 
-class FirstAndLastDateRequest extends BaseRequest
+class BeginEndDateRequest extends BaseRequest
 {
     public function rules()
     {
