@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\BeginEndDateRequest;
 use App\Http\Requests\DateToTimestampRequest;
-use App\Http\Requests\FirstAndLastDateRequest;
 use App\Http\Requests\TimestampToDateRequest;
 use App\Models\EpochConverter;
 use App\Repositories\EpochRepository;
@@ -35,11 +35,11 @@ class EpochController extends ApiController
         return $this->handleCustomEndPoint(BaseJob::class, $request);
     }
 
-    public function getFirstAndLastOfInterval(FirstAndLastDateRequest $request, EpochConverter $converter)
+    public function getBeginEndOfInterval(BeginEndDateRequest $request, EpochConverter $converter)
     {
 
-        $this->jobMethod = 'getFirstAndLastOfInterval';
-        $this->customRequest = FirstAndLastDateRequest::class;
+        $this->jobMethod = 'getBeginEndOfInterval';
+        $this->customRequest = BeginEndDateRequest::class;
         return $this->handleCustomEndPoint(BaseJob::class, $request);
     }
 }
