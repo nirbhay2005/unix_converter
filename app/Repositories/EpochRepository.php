@@ -74,7 +74,7 @@ class EpochRepository extends EloquentBaseRepository
         }
     }
 
-    public function getFirstAndLastOfInterval($params)
+    public function getBeginEndOfInterval($params)
     {
         $tz = $params['data']['timezone'] == 'local' ? null : $params['data']['timezone'];
         switch ($params['data']['format']) {
