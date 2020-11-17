@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
+use Luezoid\Laravelcore\Requests\BaseRequest;
 
-class TimestampToDateRequest extends FormRequest
+class TimestampToDateRequest extends BaseRequest
 {
     public function rules()
     {

@@ -3,10 +3,10 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Luezoid\Laravelcore\Requests\BaseRequest;
 
-class FirstAndLastDateRequest extends FormRequest
+class FirstAndLastDateRequest extends BaseRequest
 {
     public function rules()
     {

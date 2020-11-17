@@ -3,16 +3,16 @@
 
 namespace App\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
+use Luezoid\Laravelcore\Requests\BaseRequest;
 
-class DateToTimestampRequest extends FormRequest
+class DateToTimestampRequest extends BaseRequest
 {
     public function rules()
     {
         return [
             'date' => 'bail|required|date',
-            'tz' => ['required',
+            'timezone' => ['required',
                 Rule::in(['gmt', 'local'])
             ]
         ];
