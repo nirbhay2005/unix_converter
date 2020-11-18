@@ -15,8 +15,8 @@
         "laravel/framework": "^7.0",
         "laravel/passport": "^8.4",
         "laravel/tinker": "^2.0",
-        "luezoid/laravel-core": "^7.0",
-        "ext-http": "*"
+        "laravel/ui": "^2.4",
+        "luezoid/laravel-core": "^7.0"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
