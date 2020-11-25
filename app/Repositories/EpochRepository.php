@@ -69,7 +69,7 @@ class EpochRepository extends EloquentBaseRepository
         } catch (Exception $e) {
             return [
                 'status' => false,
-                'timestamp' => 'Sorry, Can\'t parse this date'
+                'timestamp' => 'Sorry, Can\'t parse this date.'
             ];
         }
     }

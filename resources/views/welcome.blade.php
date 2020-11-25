@@ -14,10 +14,11 @@
 <body>
 <div id="app">
     <div class="container">
-        <navbar></navbar>
+        <nav-bar></nav-bar>
         <clock></clock>
         <epoch-to-human></epoch-to-human>
         <date-to-epoch></date-to-epoch>
+        <human-date-to-epoch></human-date-to-epoch>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

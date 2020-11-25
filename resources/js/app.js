@@ -17,10 +17,11 @@ window.Vue = require('vue');
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-Vue.component('navbar', require('./components/NavBar.vue').default);
+Vue.component('nav-bar', require('./components/NavBar.vue').default);
 Vue.component('clock', require('./components/HeaderClock.vue').default);
 Vue.component('epoch-to-human', require('./components/EpochToHuman.vue').default)
 Vue.component('date-to-epoch', require('./components/DateToEpoch.vue').default)
+Vue.component('human-date-to-epoch', require('./components/HumanDateToEpoch.vue').default)
 
 ;/**
  * Next, we will create a fresh Vue application instance and attach it to
