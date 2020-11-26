@@ -1,12 +1,13 @@
 <template>
     <div class="mt-5">
+        <h3>Convert Date to epoch timestamp</h3>
         <form @submit.prevent="dateToEpoch">
-            <input :placeholder="defaultDate" step="1" type="datetime-local" v-model="date">
-            <select v-model="timezone">
+            <input :placeholder="defaultDate" class="shadow-sm" step="1" type="datetime-local" v-model="date">
+            <select class="shadow-sm" v-model="timezone">
                 <option selected value="gmt">GMT</option>
                 <option value="local">Local Time</option>
             </select>
-            <button type="submit">Date to Timestamp</button>
+            <button class="btn-group btn-info" type="submit">Date to Timestamp</button>
         </form>
         <div class="result-box mt-2" v-if="response">
             <p><b>Epoch Timestamp</b> : {{info.timestamp}} </p>
@@ -29,7 +30,7 @@
                 info: '',
                 response: false,
                 date: '',
-                timezone: ''
+                timezone: 'gmt'
             }
         },
         computed: {
@@ -62,10 +63,14 @@
     }
 
     div.result-box {
-        line-height: 10px;
+        line-height: normal;
     }
 
     div.error-box {
-        line-height: 5px;
+        line-height: normal;
+    }
+
+    h3 {
+        color: #1b4b72;
     }
 </style>

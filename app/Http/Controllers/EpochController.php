@@ -38,7 +38,7 @@ class EpochController extends ApiController
     public function getBeginEndOfInterval(BeginEndDateRequest $request, EpochConverter $converter)
     {
 
-        $this->jobMethod = 'getBeginEndOfInterval';
+        $this->jobMethod = 'getBeginEnd';
         $this->customRequest = BeginEndDateRequest::class;
         return $this->handleCustomEndPoint(BaseJob::class, $request);
     }

@@ -1,8 +1,9 @@
 <template>
-    <div>
+    <div class="mt-5">
+        <h3>Convert epoch timestamp to human-readable date</h3>
         <form @submit.prevent="epochToHuman" class="mt-3">
-            <input :placeholder="stamp" v-model="timestamp">
-            <button type="submit">Timestamp to Date</button>
+            <input :placeholder="stamp" class="shadow-sm" v-model="timestamp">
+            <button class="btn-group btn-info" type="submit">Timestamp to Date</button>
             <p>Supports Unix timestamps in seconds and milliseconds.</p>
         </form>
         <div class="result-box" v-if="response">
@@ -56,10 +57,16 @@
 
 <style scoped>
     div.result-box {
-        line-height: 10px;
+        line-height: normal;
+        overflow: auto;
+
     }
 
     div.error-box {
-        line-height: 2px;
+        line-height: normal;
+    }
+
+    h3 {
+        color: #1b4b72;
     }
 </style>

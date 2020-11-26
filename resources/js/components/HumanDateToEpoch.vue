@@ -1,8 +1,9 @@
 <template>
     <div class="mt-5">
+        <h3>Convert human readable date to epoch timestamp</h3>
         <form @submit.prevent="humanDateToEpoch">
-            <input :placeholder="defaultDate" size="30" type="text" v-model="date">
-            <button type="submit">Human Date to Timestamp</button>
+            <input :placeholder="defaultDate" class="shadow-sm" size="30" type="text" v-model="date">
+            <button class="btn-group btn-info" type="submit">Human Date to Timestamp</button>
             <p class="font-weight-lighter mt-1">Input format: RFC 2822, D-M-Y, M/D/Y, Y-M-D, etc. Strip 'GMT' to convert
                 to local time.</p>
         </form>
@@ -56,6 +57,10 @@
 
 <style scoped>
     div.result-box {
-        line-height: 10px;
+        line-height: normal;
+    }
+
+    h3 {
+        color: #1b4b72;
     }
 </style>

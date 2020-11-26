@@ -101,4 +101,30 @@ class EpochRepository extends EloquentBaseRepository
             'end_timestamp' => $end->getTimestamp()
         ];
     }
+
+    public function getBeginEnd($params)
+    {
+        $tz = $params['data']['timezone'] == 'local' ? null : $params['data']['timezone'];
+        $date = $params['data']['date'];
+        return [
+            'day' => [
+                'start_date' => Carbon::parse($date, $tz)->startOfDay()->toCookieString(),
+                'start_timestamp' => Carbon::parse($date, $tz)->startOfDay()->getTimestamp(),
+                'end_date' => Carbon::parse($date, $tz)->endOfDay()->toCookieString(),
+                'end_timestamp' => Carbon::parse($date, $tz)->endOfDay()->getTimestamp()
+            ],
+            'month' => [
+                'start_date' => Carbon::parse($date, $tz)->startOfMonth()->toCookieString(),
+                'start_timestamp' => Carbon::parse($date, $tz)->startOfMonth()->getTimestamp(),
+                'end_date' => Carbon::parse($date, $tz)->endOfMonth()->toCookieString(),
+                'end_timestamp' => Carbon::parse($date, $tz)->endOfMonth()->getTimestamp()
+            ],
+            'year' => [
+                'start_date' => Carbon::parse($date, $tz)->startOfYear()->toCookieString(),
+                'start_timestamp' => Carbon::parse($date, $tz)->startOfYear()->getTimestamp(),
+                'end_date' => Carbon::parse($date, $tz)->endOfYear()->toCookieString(),
+                'end_timestamp' => Carbon::parse($date, $tz)->endOfYear()->getTimestamp()
+            ]
+        ];
+    }
 }

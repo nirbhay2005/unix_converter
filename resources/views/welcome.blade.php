@@ -12,14 +12,13 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 </head>
 <body>
-<div id="app">
-    <div class="container">
-        <nav-bar></nav-bar>
-        <clock></clock>
-        <epoch-to-human></epoch-to-human>
-        <date-to-epoch></date-to-epoch>
-        <human-date-to-epoch></human-date-to-epoch>
-    </div>
+<div id="app" class="container">
+    <nav-bar></nav-bar>
+    <clock></clock>
+    <epoch-to-human></epoch-to-human>
+    <date-to-epoch></date-to-epoch>
+    <human-date-to-epoch></human-date-to-epoch>
+    <begin-end></begin-end>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
