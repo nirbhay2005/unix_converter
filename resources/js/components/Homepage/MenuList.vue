@@ -8,7 +8,7 @@
         <div class="mt-3">
             <p @click="showItem" class="collapsible" id="tools">Tools</p>
             <div class="content mb-3">
-                <a href="#">Epoch Converter</a><br>
+                <a href="/">Epoch Converter</a><br>
                 <a href="#">Batch Converter</a><br>
                 <a href="#">Timezone Converter</a><br>
                 <a href="#">Timestamp List</a><br>

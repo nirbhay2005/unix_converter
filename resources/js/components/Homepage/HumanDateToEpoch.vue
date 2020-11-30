@@ -2,11 +2,11 @@
     <div class="mt-5">
         <h3>Convert human readable date to epoch timestamp</h3>
         <form @submit.prevent="humanDateToEpoch" class="h-e">
-            <input :placeholder="defaultDate" class="shadow-sm h-e" size="30" type="text" v-model="date">
+            <input :placeholder="defaultDate" class="shadow-sm h-e" size="25" type="text" v-model="date">
             <button class="btn-group btn-info h-e" type="submit">Human Date to Timestamp</button>
-            <p class="font-weight-lighter mt-1 h-e">Input format: RFC 2822, D-M-Y, M/D/Y, Y-M-D, etc. Strip 'GMT' to
-                convert
-                to local time.</p>
+            <button class="btn-group btn-info e-h" type="reset">Reset</button>
+            <p class="font-weight-lighter mt-1 h-e">Input format: Relative date(e.g. today, tomorrow etc),
+                RFC 2822, D-M-Y, M/D/Y, Y-M-D, etc. Strip 'GMT' to convert to local time.</p>
         </form>
         <div class="result-box mt-2 h-e" v-if="info.status">
             <p><b>Epoch Timestamp</b> : {{info.timestamp}} </p>

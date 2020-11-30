@@ -1879,16 +1879,16 @@ module.exports = {
   isFormData: isFormData,
   isArrayBufferView: isArrayBufferView,
   isString: isString,
-  isNumber: isNumber,
-  isObject: isObject,
-  isUndefined: isUndefined,
-  isDate: isDate,
-  isFile: isFile,
-  isBlob: isBlob,
-  isFunction: isFunction,
-  isStream: isStream,
-  isURLSearchParams: isURLSearchParams,
-  isStandardBrowserEnv: isStandardBrowserEnv,
+    isNumber: isNumber,
+    isObject: isObject,
+    isUndefined: isUndefined,
+    isDate: isDate,
+    isFile: isFile,
+    isBlob: isBlob,
+    isFunction: isFunction,
+    isStream: isStream,
+    isURLSearchParams: isURLSearchParams,
+    isStandardBrowserEnv: isStandardBrowserEnv,
     forEach: forEach,
     merge: merge,
     deepMerge: deepMerge,
@@ -2019,12 +2019,12 @@ module.exports = {
 
       axios.post('api/begin-end', {
         format: this.format,
-        date: this.date,
-        timezone: this.timezone
+          date: this.date,
+          timezone: this.timezone
       }).then(function (response) {
-        _this.info = response.data.data;
-        _this.response = true;
-        _this.error = false;
+          _this.info = response.data.data;
+          _this.response = true;
+          _this.error = false;
       })["catch"](function (error) {
           console.log(error.response.status);
           _this.error = true;
@@ -2091,12 +2091,12 @@ module.exports = {
       var _this = this;
 
       axios.post('api/timestamp', {
-        date: this.date,
-        timezone: this.timezone
+          date: this.date,
+          timezone: this.timezone
       }).then(function (response) {
-        _this.info = response.data.data;
-        _this.response = true;
-        _this.error = false;
+          _this.info = response.data.data;
+          _this.response = true;
+          _this.error = false;
       })["catch"](function (error) {
           console.log(error.response.status);
           _this.error = true;
@@ -2140,6 +2140,7 @@ module.exports = {
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "EpochToHuman",
   data: function data() {
@@ -2159,15 +2160,15 @@ module.exports = {
     epochToHuman: function epochToHuman() {
       var _this = this;
 
-      axios.post('api/date', {
-        timestamp: this.timestamp
-      }).then(function (response) {
-        _this.info = response.data.data;
-        _this.response = true;
-        _this.error = false;
-      })["catch"](function (error) {
-        _this.error = true;
-      });
+        axios.post('api/date', {
+            timestamp: this.timestamp
+        }).then(function (response) {
+            _this.info = response.data.data;
+            _this.response = true;
+            _this.error = false;
+        })["catch"](function (error) {
+            _this.error = true;
+        });
         this.response = false;
     },
       showDate: function showDate() {
@@ -2198,10 +2199,10 @@ module.exports = {
 //
 var timestamp = Math.floor(Date.now() / 1000);
 
-function updateTime() {
-    $('#time').html(timestamp);
-    timestamp++;
-}
+            function updateTime() {
+                $('#time').html(timestamp);
+                timestamp++;
+            }
 
             $(function () {
                 setInterval(updateTime, 1000);
@@ -2436,15 +2437,17 @@ function updateTime() {
             }(this, (function (exports, $, Popper) {
                 'use strict';
 
-  function _interopDefaultLegacy (e) { return e && typeof e === 'object' && 'default' in e ? e : { 'default': e }; }
+                function _interopDefaultLegacy(e) {
+                    return e && typeof e === 'object' && 'default' in e ? e : {'default': e};
+                }
 
-  var $__default = /*#__PURE__*/_interopDefaultLegacy($);
-  var Popper__default = /*#__PURE__*/_interopDefaultLegacy(Popper);
+                var $__default = /*#__PURE__*/_interopDefaultLegacy($);
+                var Popper__default = /*#__PURE__*/_interopDefaultLegacy(Popper);
 
-  function _defineProperties(target, props) {
-    for (var i = 0; i < props.length; i++) {
-      var descriptor = props[i];
-      descriptor.enumerable = descriptor.enumerable || false;
+                function _defineProperties(target, props) {
+                    for (var i = 0; i < props.length; i++) {
+                        var descriptor = props[i];
+                        descriptor.enumerable = descriptor.enumerable || false;
       descriptor.configurable = true;
       if ("value" in descriptor) descriptor.writable = true;
       Object.defineProperty(target, descriptor.key, descriptor);
@@ -6831,12 +6834,12 @@ function updateTime() {
   exports.Carousel = Carousel;
   exports.Collapse = Collapse;
   exports.Dropdown = Dropdown;
-  exports.Modal = Modal;
-  exports.Popover = Popover;
-  exports.Scrollspy = ScrollSpy;
-  exports.Tab = Tab;
-  exports.Toast = Toast;
-  exports.Tooltip = Tooltip;
+                exports.Modal = Modal;
+                exports.Popover = Popover;
+                exports.Scrollspy = ScrollSpy;
+                exports.Tab = Tab;
+                exports.Toast = Toast;
+                exports.Tooltip = Tooltip;
                 exports.Util = Util;
 
                 Object.defineProperty(exports, '__esModule', {value: true});
@@ -38151,10 +38154,9 @@ process.umask = function() { return 0; };
             var insertInto;
 
 
+            var options = {"hmr": true}
 
-var options = {"hmr":true}
-
-options.transform = transform
+            options.transform = transform
             options.insertInto = undefined;
 
             var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
@@ -38184,10 +38186,9 @@ options.transform = transform
             var insertInto;
 
 
+            var options = {"hmr": true}
 
-var options = {"hmr":true}
-
-options.transform = transform
+            options.transform = transform
             options.insertInto = undefined;
 
             var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
@@ -38217,10 +38218,9 @@ options.transform = transform
             var insertInto;
 
 
+            var options = {"hmr": true}
 
-var options = {"hmr":true}
-
-options.transform = transform
+            options.transform = transform
             options.insertInto = undefined;
 
             var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
@@ -38321,11 +38321,13 @@ options.transform = transform
 
             var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
 
-if(content.locals) module.exports = content.locals;
+            if (content.locals) module.exports = content.locals;
 
-if(false) {}
+            if (false) {
+            }
 
-/***/ }),
+            /***/
+        }),
 
 /***/ "./node_modules/style-loader/lib/addStyles.js":
 /*!****************************************************!*\
@@ -38601,9 +38603,9 @@ function addStyle (obj, options) {
             // This allows conditional loading of css
             return function () {
                 // noop
-	    	};
-	    }
-	}
+            };
+        }
+    }
 
 	if (options.singleton) {
 		var styleIndex = singletonCounter++;
@@ -38896,13 +38898,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(/*! setimmediate */ "./node_modules/setimmediate/setImmediate.js");
+                __webpack_require__(/*! setimmediate */ "./node_modules/setimmediate/setImmediate.js");
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
-exports.setImmediate = (typeof self !== "undefined" && self.setImmediate) ||
-    (typeof global !== "undefined" && global.setImmediate) ||
-    (this && this.setImmediate);
+                exports.setImmediate = (typeof self !== "undefined" && self.setImmediate) ||
+                    (typeof global !== "undefined" && global.setImmediate) ||
+                    (this && this.setImmediate);
                 exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                     (typeof global !== "undefined" && global.clearImmediate) ||
                     (this && this.clearImmediate);
@@ -38934,16 +38936,16 @@ exports.setImmediate = (typeof self !== "undefined" && self.setImmediate) ||
             var render = function () {
                 var _vm = this
                 var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h3", [
-      _vm._v("Epoch dates for the start and end of the year/month/day")
-    ]),
-    _vm._v(" "),
-    _c(
-      "form",
-      {
-        on: {
+                var _c = _vm._self._c || _h
+                return _c("div", [
+                    _c("h3", [
+                        _vm._v("Epoch dates for the start and end of the year/month/day")
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                        "form",
+                        {
+                            on: {
           submit: function($event) {
             $event.preventDefault()
             return _vm.beginEnd($event)
@@ -39092,50 +39094,50 @@ exports.setImmediate = (typeof self !== "undefined" && self.setImmediate) ||
             )
         ])
       ]
-    ),
-      _vm._v(" "),
-      _vm.response
-          ? _c("div", {staticClass: "result-box mt-2 b-e"}, [
-              _vm.format == "day"
-                  ? _c("table", {attrs: {border: "1px solid black"}}, [
-                      _c("tbody", [
-                          _vm._m(0),
-                          _vm._v(" "),
-                          _c("tr", [
-                              _c("td", [_vm._v("Start of day:")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(_vm.info.day.startTimestamp))]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(_vm.info.day.startDate))])
-                          ]),
-                          _vm._v(" "),
-                          _c("tr", [
-                              _c("td", [_vm._v("End of day:")]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(_vm.info.day.endTimestamp))]),
-                              _vm._v(" "),
-                              _c("td", [_vm._v(_vm._s(_vm.info.day.endDate))])
-                          ])
-                      ])
-                  ])
-                  : _vm.format == "month"
-                  ? _c("table", {attrs: {border: "1px solid black"}}, [
-                      _c("tbody", [
-                          _vm._m(1),
-                          _vm._v(" "),
-                          _c("tr", [
-                              _c("td", [_vm._v("Start of month:")]),
-                              _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(_vm.info.month.startTimestamp))]),
+                    ),
                     _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(_vm.info.month.startDate))])
-                  ]),
-                  _vm._v(" "),
-                  _c("tr", [
-                    _c("td", [_vm._v("End of month:")]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(_vm.info.month.endTimestamp))]),
-                    _vm._v(" "),
+                    _vm.response
+                        ? _c("div", {staticClass: "result-box mt-2 b-e"}, [
+                            _vm.format == "day"
+                                ? _c("table", {attrs: {border: "1px solid black"}}, [
+                                    _c("tbody", [
+                                        _vm._m(0),
+                                        _vm._v(" "),
+                                        _c("tr", [
+                                            _c("td", [_vm._v("Start of day:")]),
+                                            _vm._v(" "),
+                                            _c("td", [_vm._v(_vm._s(_vm.info.day.startTimestamp))]),
+                                            _vm._v(" "),
+                                            _c("td", [_vm._v(_vm._s(_vm.info.day.startDate))])
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("tr", [
+                                            _c("td", [_vm._v("End of day:")]),
+                                            _vm._v(" "),
+                                            _c("td", [_vm._v(_vm._s(_vm.info.day.endTimestamp))]),
+                                            _vm._v(" "),
+                                            _c("td", [_vm._v(_vm._s(_vm.info.day.endDate))])
+                                        ])
+                                    ])
+                                ])
+                                : _vm.format == "month"
+                                ? _c("table", {attrs: {border: "1px solid black"}}, [
+                                    _c("tbody", [
+                                        _vm._m(1),
+                                        _vm._v(" "),
+                                        _c("tr", [
+                                            _c("td", [_vm._v("Start of month:")]),
+                                            _vm._v(" "),
+                                            _c("td", [_vm._v(_vm._s(_vm.info.month.startTimestamp))]),
+                                            _vm._v(" "),
+                                            _c("td", [_vm._v(_vm._s(_vm.info.month.startDate))])
+                                        ]),
+                                        _vm._v(" "),
+                                        _c("tr", [
+                                            _c("td", [_vm._v("End of month:")]),
+                                            _vm._v(" "),
+                                            _c("td", [_vm._v(_vm._s(_vm.info.month.endTimestamp))]),
+                                            _vm._v(" "),
                     _c("td", [_vm._v(_vm._s(_vm.info.month.endDate))])
                   ])
                 ])
@@ -39211,10 +39213,10 @@ var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-        _c("b", [_vm._v("Please select the year/month/date or timezone.")])
-    ])
+      var _c = _vm._self._c || _h
+      return _c("p", [
+          _c("b", [_vm._v("Please select the year/month/date or timezone.")])
+      ])
   }
 ]
             render._withStripped = true
@@ -39244,130 +39246,130 @@ var staticRenderFns = [
             var render = function () {
                 var _vm = this
                 var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "mt-5" }, [
-    _c("h3", [_vm._v("Convert Date to epoch timestamp")]),
-    _vm._v(" "),
-    _c(
-        "form",
-        {
-            staticClass: "d-e",
-            on: {
-                submit: function ($event) {
-                    $event.preventDefault()
-                    return _vm.dateToEpoch($event)
-                }
-            }
-        },
-        [
-            _c("input", {
-                directives: [
-                    {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.date,
-                        expression: "date"
-                    }
-                ],
-                staticClass: "shadow-sm d-e",
-                attrs: {
-                    placeholder: _vm.defaultDate,
-                    step: "1",
-                    type: "datetime-local"
-                },
-                domProps: {value: _vm.date},
-                on: {
-                    input: function ($event) {
-                        if ($event.target.composing) {
-                            return
-                        }
-                        _vm.date = $event.target.value
-                    }
-                }
-            }),
-            _vm._v(" "),
-            _c(
-                "select",
-                {
-                    directives: [
-                        {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.timezone,
-                            expression: "timezone"
-                        }
-                    ],
-                    staticClass: "shadow-sm d-e",
-                    on: {
-                        change: function ($event) {
-                            var $$selectedVal = Array.prototype.filter
-                                .call($event.target.options, function (o) {
-                                    return o.selected
-                                })
-                                .map(function (o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                })
-                            _vm.timezone = $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                        }
-                    }
-                },
-                [
+                var _c = _vm._self._c || _h
+                return _c("div", {staticClass: "mt-5"}, [
+                    _c("h3", [_vm._v("Convert Date to epoch timestamp")]),
+                    _vm._v(" "),
                     _c(
-                        "option",
-                        {staticClass: "d-e", attrs: {selected: "", value: "gmt"}},
-                        [_vm._v("GMT")]
+                        "form",
+                        {
+                            staticClass: "d-e",
+                            on: {
+                                submit: function ($event) {
+                                    $event.preventDefault()
+                                    return _vm.dateToEpoch($event)
+                                }
+                            }
+                        },
+                        [
+                            _c("input", {
+                                directives: [
+                                    {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.date,
+                                        expression: "date"
+                                    }
+                                ],
+                                staticClass: "shadow-sm d-e",
+                                attrs: {
+                                    placeholder: _vm.defaultDate,
+                                    step: "1",
+                                    type: "datetime-local"
+                                },
+                                domProps: {value: _vm.date},
+                                on: {
+                                    input: function ($event) {
+                                        if ($event.target.composing) {
+                                            return
+                                        }
+                                        _vm.date = $event.target.value
+                                    }
+                                }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                                "select",
+                                {
+                                    directives: [
+                                        {
+                                            name: "model",
+                                            rawName: "v-model",
+                                            value: _vm.timezone,
+                                            expression: "timezone"
+                                        }
+                                    ],
+                                    staticClass: "shadow-sm d-e",
+                                    on: {
+                                        change: function ($event) {
+                                            var $$selectedVal = Array.prototype.filter
+                                                .call($event.target.options, function (o) {
+                                                    return o.selected
+                                                })
+                                                .map(function (o) {
+                                                    var val = "_value" in o ? o._value : o.value
+                                                    return val
+                                                })
+                                            _vm.timezone = $event.target.multiple
+                                                ? $$selectedVal
+                                                : $$selectedVal[0]
+                                        }
+                                    }
+                                },
+                                [
+                                    _c(
+                                        "option",
+                                        {staticClass: "d-e", attrs: {selected: "", value: "gmt"}},
+                                        [_vm._v("GMT")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("option", {staticClass: "d-e", attrs: {value: "local"}}, [
+                                        _vm._v("Local Time")
+                                    ])
+                                ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                                "button",
+                                {staticClass: "btn-group btn-info d-e", attrs: {type: "submit"}},
+                                [_vm._v("Date to Timestamp")]
+                            )
+                        ]
                     ),
                     _vm._v(" "),
-                    _c("option", {staticClass: "d-e", attrs: {value: "local"}}, [
-                        _vm._v("Local Time")
-                    ])
-                ]
-            ),
-            _vm._v(" "),
-            _c(
-                "button",
-                {staticClass: "btn-group btn-info d-e", attrs: {type: "submit"}},
-                [_vm._v("Date to Timestamp")]
-            )
-        ]
-    ),
-      _vm._v(" "),
-      _vm.response
-          ? _c("div", {staticClass: "result-box mt-2 d-e"}, [
-              _c("p", [
-                  _c("b", [_vm._v("Epoch Timestamp")]),
-                  _vm._v(" : " + _vm._s(_vm.info.timestamp) + " ")
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                  _c("b", [_vm._v("Timestamp in milliseconds")]),
-                  _vm._v(" : " + _vm._s(_vm.info.timestamp * 1000) + " ")
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                  _c("b", [_vm._v("Date and time (GMT)")]),
-                  _vm._v(": " + _vm._s(_vm.info.gmt))
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                  _c("b", [_vm._v("Date and time (Your Timezone)")]),
-                  _vm._v(" : " + _vm._s(_vm.info.local))
-              ])
-          ])
-          : _vm._e(),
-      _vm._v(" "),
-      _vm.error
-          ? _c("div", {staticClass: "error-box mt-3 d-e"}, [_vm._m(0)])
-          : _vm._e()
-  ])
+                    _vm.response
+                        ? _c("div", {staticClass: "result-box mt-2 d-e"}, [
+                            _c("p", [
+                                _c("b", [_vm._v("Epoch Timestamp")]),
+                                _vm._v(" : " + _vm._s(_vm.info.timestamp) + " ")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                                _c("b", [_vm._v("Timestamp in milliseconds")]),
+                                _vm._v(" : " + _vm._s(_vm.info.timestamp * 1000) + " ")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                                _c("b", [_vm._v("Date and time (GMT)")]),
+                                _vm._v(": " + _vm._s(_vm.info.gmt))
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                                _c("b", [_vm._v("Date and time (Your Timezone)")]),
+                                _vm._v(" : " + _vm._s(_vm.info.local))
+                            ])
+                        ])
+                        : _vm._e(),
+                    _vm._v(" "),
+                    _vm.error
+                        ? _c("div", {staticClass: "error-box mt-3 d-e"}, [_vm._m(0)])
+                        : _vm._e()
+                ])
 }
 var staticRenderFns = [
   function() {
-    var _vm = this
-    var _h = _vm.$createElement
+      var _vm = this
+      var _h = _vm.$createElement
       var _c = _vm._self._c || _h
       return _c("p", [_c("b", [_vm._v("Please select the timezone.")])])
   }
@@ -39399,91 +39401,97 @@ var staticRenderFns = [
             var render = function () {
                 var _vm = this
                 var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "mt-5" }, [
-    _c("h3", [_vm._v("Convert epoch timestamp to human-readable date")]),
-    _vm._v(" "),
-    _c(
-        "form",
-        {
-            staticClass: "mt-3 e-h",
-            on: {
-                submit: function ($event) {
-                    $event.preventDefault()
-                    return _vm.epochToHuman($event)
-                }
-            }
-        },
-        [
-            _c("input", {
-                directives: [
-                    {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.timestamp,
-                        expression: "timestamp"
-                    }
-                ],
-                staticClass: "shadow-sm e-h",
-                attrs: {placeholder: _vm.stamp},
-                domProps: {value: _vm.timestamp},
-                on: {
-                    input: function ($event) {
-                        if ($event.target.composing) {
-                            return
-                        }
-                        _vm.timestamp = $event.target.value
-                    }
-                }
-            }),
-            _vm._v(" "),
-            _c(
-                "button",
-                {staticClass: "btn-group btn-info e-h", attrs: {type: "submit"}},
-                [_vm._v("Timestamp to Date")]
-            ),
-            _vm._v(" "),
-            _c("p", {staticClass: "e-h"}, [
-                _vm._v("Supports Unix timestamps in seconds and milliseconds.")
-            ])
-        ]
-    ),
-      _vm._v(" "),
-      _vm.response
-          ? _c("div", {staticClass: "result-box e-h mt-0"}, [
-              _c("p", [
-                  _vm._v("Assuming that this timestamp is in "),
-                  _c("b", [_vm._v(_vm._s(_vm.info.unit))]),
-                  _vm._v(":")
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                  _c("b", [_vm._v("GMT")]),
-                  _vm._v(" : " + _vm._s(_vm.info.gmt) + " ")
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                  _c("b", [_vm._v("Your Timezone")]),
-                  _vm._v(": " + _vm._s(_vm.info.local))
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                  _c("b", [_vm._v("Relative")]),
-                  _vm._v(" : " + _vm._s(_vm.info.relative))
-              ])
-          ])
-          : _vm._e(),
-      _vm._v(" "),
-      _vm.error
-          ? _c("div", {staticClass: "error-box e-h"}, [
-              _c("p", [_vm._v("Sorry, this timestamp is not valid.")]),
-              _vm._v(" "),
-              _c("p", [
-                  _vm._v("Check your timestamp, strip letters and punctuation marks.")
-              ])
-          ])
-          : _vm._e()
-  ])
+                var _c = _vm._self._c || _h
+                return _c("div", {staticClass: "mt-5"}, [
+                    _c("h3", [_vm._v("Convert epoch timestamp to human-readable date")]),
+                    _vm._v(" "),
+                    _c(
+                        "form",
+                        {
+                            staticClass: "mt-3 e-h",
+                            on: {
+                                submit: function ($event) {
+                                    $event.preventDefault()
+                                    return _vm.epochToHuman($event)
+                                }
+                            }
+                        },
+                        [
+                            _c("input", {
+                                directives: [
+                                    {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.timestamp,
+                                        expression: "timestamp"
+                                    }
+                                ],
+                                staticClass: "shadow-sm e-h",
+                                attrs: {placeholder: _vm.stamp, size: "12"},
+                                domProps: {value: _vm.timestamp},
+                                on: {
+                                    input: function ($event) {
+                                        if ($event.target.composing) {
+                                            return
+                                        }
+                                        _vm.timestamp = $event.target.value
+                                    }
+                                }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                                "button",
+                                {staticClass: "btn-group btn-info e-h", attrs: {type: "submit"}},
+                                [_vm._v("Timestamp to Date")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                                "button",
+                                {staticClass: "btn-group btn-info e-h", attrs: {type: "reset"}},
+                                [_vm._v("Reset")]
+                            ),
+                            _vm._v(" "),
+                            _c("p", {staticClass: "e-h"}, [
+                                _vm._v("Supports Unix timestamps in seconds and milliseconds.")
+                            ])
+                        ]
+                    ),
+                    _vm._v(" "),
+                    _vm.response
+                        ? _c("div", {staticClass: "result-box e-h mt-0"}, [
+                            _c("p", [
+                                _vm._v("Assuming that this timestamp is in "),
+                                _c("b", [_vm._v(_vm._s(_vm.info.unit))]),
+                                _vm._v(":")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                                _c("b", [_vm._v("GMT")]),
+                                _vm._v(" : " + _vm._s(_vm.info.gmt) + " ")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                                _c("b", [_vm._v("Your Timezone")]),
+                                _vm._v(": " + _vm._s(_vm.info.local))
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                                _c("b", [_vm._v("Relative")]),
+                                _vm._v(" : " + _vm._s(_vm.info.relative))
+                            ])
+                        ])
+                        : _vm._e(),
+                    _vm._v(" "),
+                    _vm.error
+                        ? _c("div", {staticClass: "error-box e-h"}, [
+                            _c("p", [_vm._v("Sorry, this timestamp is not valid.")]),
+                            _vm._v(" "),
+                            _c("p", [
+                                _vm._v("Check your timestamp, strip letters and punctuation marks.")
+                            ])
+                        ])
+                        : _vm._e()
+                ])
             }
             var staticRenderFns = []
             render._withStripped = true
@@ -39513,16 +39521,16 @@ var staticRenderFns = [
             var render = function () {
                 var _vm = this
                 var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _vm._m(0)
-}
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
+                var _c = _vm._self._c || _h
+                return _vm._m(0)
+            }
+            var staticRenderFns = [
+                function () {
+                    var _vm = this
+                    var _h = _vm.$createElement
+                    var _c = _vm._self._c || _h
+                    return _c(
+                        "div",
       { staticClass: "mt-3 justify-content-lg-center border rounded" },
       [
         _c("p", { staticClass: "mt-3 justify-content-lg-center" }, [
@@ -39532,9 +39540,9 @@ var staticRenderFns = [
           ])
         ])
       ]
-    )
-  }
-]
+                    )
+                }
+            ]
             render._withStripped = true
 
 
@@ -39562,82 +39570,88 @@ var staticRenderFns = [
             var render = function () {
                 var _vm = this
                 var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "mt-5" }, [
-    _c("h3", [_vm._v("Convert human readable date to epoch timestamp")]),
-    _vm._v(" "),
-    _c(
-        "form",
-        {
-            staticClass: "h-e",
-            on: {
-                submit: function ($event) {
-                    $event.preventDefault()
-                    return _vm.humanDateToEpoch($event)
-                }
-            }
-        },
-        [
-            _c("input", {
-                directives: [
-                    {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.date,
-                        expression: "date"
-                    }
-                ],
-                staticClass: "shadow-sm h-e",
-                attrs: {placeholder: _vm.defaultDate, size: "30", type: "text"},
-                domProps: {value: _vm.date},
-                on: {
-                    input: function ($event) {
-                        if ($event.target.composing) {
-                            return
-                        }
-                        _vm.date = $event.target.value
-                    }
-                }
-            }),
-            _vm._v(" "),
-            _c(
-                "button",
-                {staticClass: "btn-group btn-info h-e", attrs: {type: "submit"}},
-                [_vm._v("Human Date to Timestamp")]
-            ),
-            _vm._v(" "),
-            _c("p", {staticClass: "font-weight-lighter mt-1 h-e"}, [
-                _vm._v(
-                    "Input format: RFC 2822, D-M-Y, M/D/Y, Y-M-D, etc. Strip 'GMT' to\n            convert\n            to local time."
-                )
-            ])
-        ]
-    ),
-      _vm._v(" "),
-      _vm.info.status
-          ? _c("div", {staticClass: "result-box mt-2 h-e"}, [
-              _c("p", [
-                  _c("b", [_vm._v("Epoch Timestamp")]),
-                  _vm._v(" : " + _vm._s(_vm.info.timestamp) + " ")
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                  _c("b", [_vm._v("Timestamp in milliseconds")]),
-                  _vm._v(" : " + _vm._s(_vm.info.timestamp * 1000) + " ")
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                  _c("b", [_vm._v("Date and time (GMT)")]),
-                  _vm._v(": " + _vm._s(_vm.info.gmt))
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                  _c("b", [_vm._v("Date and time (Your Timezone)")]),
-                  _vm._v(" : " + _vm._s(_vm.info.local))
-              ])
-          ])
-          : _c("div", [_c("p", [_c("b", [_vm._v(_vm._s(_vm.info.timestamp))])])])
-  ])
+                var _c = _vm._self._c || _h
+                return _c("div", {staticClass: "mt-5"}, [
+                    _c("h3", [_vm._v("Convert human readable date to epoch timestamp")]),
+                    _vm._v(" "),
+                    _c(
+                        "form",
+                        {
+                            staticClass: "h-e",
+                            on: {
+                                submit: function ($event) {
+                                    $event.preventDefault()
+                                    return _vm.humanDateToEpoch($event)
+                                }
+                            }
+                        },
+                        [
+                            _c("input", {
+                                directives: [
+                                    {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.date,
+                                        expression: "date"
+                                    }
+                                ],
+                                staticClass: "shadow-sm h-e",
+                                attrs: {placeholder: _vm.defaultDate, size: "25", type: "text"},
+                                domProps: {value: _vm.date},
+                                on: {
+                                    input: function ($event) {
+                                        if ($event.target.composing) {
+                                            return
+                                        }
+                                        _vm.date = $event.target.value
+                                    }
+                                }
+                            }),
+                            _vm._v(" "),
+                            _c(
+                                "button",
+                                {staticClass: "btn-group btn-info h-e", attrs: {type: "submit"}},
+                                [_vm._v("Human Date to Timestamp")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                                "button",
+                                {staticClass: "btn-group btn-info e-h", attrs: {type: "reset"}},
+                                [_vm._v("Reset")]
+                            ),
+                            _vm._v(" "),
+                            _c("p", {staticClass: "font-weight-lighter mt-1 h-e"}, [
+                                _vm._v(
+                                    "Input format: Relative date(e.g. today, tomorrow etc),\n            RFC 2822, D-M-Y, M/D/Y, Y-M-D, etc. Strip 'GMT' to convert to local time."
+                                )
+                            ])
+                        ]
+                    ),
+                    _vm._v(" "),
+                    _vm.info.status
+                        ? _c("div", {staticClass: "result-box mt-2 h-e"}, [
+                            _c("p", [
+                                _c("b", [_vm._v("Epoch Timestamp")]),
+                                _vm._v(" : " + _vm._s(_vm.info.timestamp) + " ")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                                _c("b", [_vm._v("Timestamp in milliseconds")]),
+                                _vm._v(" : " + _vm._s(_vm.info.timestamp * 1000) + " ")
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                                _c("b", [_vm._v("Date and time (GMT)")]),
+                                _vm._v(": " + _vm._s(_vm.info.gmt))
+                            ]),
+                            _vm._v(" "),
+                            _c("p", [
+                                _c("b", [_vm._v("Date and time (Your Timezone)")]),
+                                _vm._v(" : " + _vm._s(_vm.info.local))
+                            ])
+                        ])
+                        : _c("div", [_c("p", [_c("b", [_vm._v(_vm._s(_vm.info.timestamp))])])])
+                ])
             }
             var staticRenderFns = []
             render._withStripped = true
@@ -39743,7 +39757,7 @@ var staticRenderFns = [
                     var _h = _vm.$createElement
                     var _c = _vm._self._c || _h
                     return _c("div", {staticClass: "content mb-3"}, [
-                        _c("a", {attrs: {href: "#"}}, [_vm._v("Epoch Converter")]),
+                        _c("a", {attrs: {href: "/"}}, [_vm._v("Epoch Converter")]),
                         _c("br"),
                         _vm._v(" "),
                         _c("a", {attrs: {href: "#"}}, [_vm._v("Batch Converter")]),
@@ -40022,16 +40036,16 @@ var staticRenderFns = [
             function normalizeComponent(
                 scriptExports,
                 render,
-  staticRenderFns,
-  functionalTemplate,
-  injectStyles,
-  scopeId,
-  moduleIdentifier, /* server only */
-  shadowMode /* vue-cli only */
-) {
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
+                staticRenderFns,
+                functionalTemplate,
+                injectStyles,
+                scopeId,
+                moduleIdentifier, /* server only */
+                shadowMode /* vue-cli only */
+            ) {
+                // Vue.extend constructor export interop
+                var options = typeof scriptExports === 'function'
+                    ? scriptExports.options
     : scriptExports
 
   // render functions
@@ -52210,15 +52224,16 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
             /***/
         }),
 
-/***/ "./resources/js/bootstrap.js":
-/*!***********************************!*\
-  !*** ./resources/js/bootstrap.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+        /***/
+        "./resources/js/bootstrap.js":
+        /*!***********************************!*\
+          !*** ./resources/js/bootstrap.js ***!
+          \***********************************/
+        /*! no static exports found */
+        /***/ (function (module, exports, __webpack_require__) {
 
-window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/**
+            window._ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+            /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
  * for JavaScript based Bootstrap features such as modals and tabs. This
  * code may be modified to fit the specific needs of your application.
@@ -53027,12 +53042,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
             /***/
         }),
 
-/***/ "./resources/sass/app.scss":
-/*!*********************************!*\
-  !*** ./resources/sass/app.scss ***!
-  \*********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
+        /***/
+        "./resources/sass/app.scss":
+        /*!*********************************!*\
+          !*** ./resources/sass/app.scss ***!
+          \*********************************/
+        /*! no static exports found */
+        /***/ (function (module, exports) {
 
 // removed by extract-text-webpack-plugin
 
