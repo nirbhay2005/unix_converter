@@ -17,13 +17,13 @@ window.Vue = require('vue');
 
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-Vue.component('nav-bar', require('./components/NavBar.vue').default);
-Vue.component('clock', require('./components/HeaderClock.vue').default);
-Vue.component('epoch-to-human', require('./components/EpochToHuman.vue').default)
-Vue.component('date-to-epoch', require('./components/DateToEpoch.vue').default)
-Vue.component('human-date-to-epoch', require('./components/HumanDateToEpoch.vue').default)
-Vue.component('begin-end', require('./components/BeginEndDate.vue').default)
-Vue.component('menu-list', require('./components/MenuList.vue').default)
+Vue.component('nav-bar', require('./components/Homepage/NavBar.vue').default);
+Vue.component('clock', require('./components/Homepage/HeaderClock.vue').default);
+Vue.component('epoch-to-human', require('./components/Homepage/EpochToHuman.vue').default)
+Vue.component('date-to-epoch', require('./components/Homepage/DateToEpoch.vue').default)
+Vue.component('human-date-to-epoch', require('./components/Homepage/HumanDateToEpoch.vue').default)
+Vue.component('begin-end', require('./components/Homepage/BeginEndDate.vue').default)
+Vue.component('menu-list', require('./components/Homepage/MenuList.vue').default)
 ;/**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
