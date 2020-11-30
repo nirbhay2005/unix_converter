@@ -1,18 +1,18 @@
 <template>
     <div class="mt-5">
         <h3>Convert epoch timestamp to human-readable date</h3>
-        <form @submit.prevent="epochToHuman" class="mt-3">
-            <input :placeholder="stamp" class="shadow-sm" v-model="timestamp">
-            <button class="btn-group btn-info" type="submit">Timestamp to Date</button>
-            <p>Supports Unix timestamps in seconds and milliseconds.</p>
+        <form @submit.prevent="epochToHuman" class="mt-3 e-h">
+            <input :placeholder="stamp" class="shadow-sm e-h" v-model="timestamp">
+            <button class="btn-group btn-info e-h" type="submit">Timestamp to Date</button>
+            <p class="e-h">Supports Unix timestamps in seconds and milliseconds.</p>
         </form>
-        <div class="result-box" v-if="response">
+        <div class="result-box e-h mt-0" v-if="response">
             <p>Assuming that this timestamp is in <b>{{info.unit}}</b>:</p>
             <p><b>GMT</b> : {{info.gmt}} </p>
             <p><b>Your Timezone</b>: {{info.local}}</p>
             <p><b>Relative</b> : {{info.relative}}</p>
         </div>
-        <div class="error-box" v-if="error">
+        <div class="error-box e-h" v-if="error">
             <p>Sorry, this timestamp is not valid.</p>
             <p>Check your timestamp, strip letters and punctuation marks.</p>
         </div>
@@ -68,5 +68,19 @@
 
     h3 {
         color: #1b4b72;
+    }
+
+    @media screen and (max-width: 576px) {
+        h3 {
+            font-size: x-large;
+        }
+
+        .e-h {
+            font-size: small;
+        }
+
+        div.e-h {
+            line-height: initial;
+        }
     }
 </style>

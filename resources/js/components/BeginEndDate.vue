@@ -11,14 +11,14 @@
                 <label for="day">Day</label>
                 <br>
                 <input :placeholder="defaultDate" class="shadow-sm" type="date" v-model="date">
-                <select class="shadow-sm" v-model="timezone">
-                    <option selected value="gmt">GMT</option>
-                    <option value="local">Local Time</option>
+                <select class="shadow-sm b-e" v-model="timezone">
+                    <option class="b-e" selected value="gmt">GMT</option>
+                    <option class="b-e" value="local">Local Time</option>
                 </select>
                 <button class="btn-group btn-info" type="submit">Convert</button>
             </p>
         </form>
-        <div class="result-box mt-2" v-if="response">
+        <div class="result-box mt-2 b-e" v-if="response">
             <table border="1px solid black" v-if="format=='day'">
                 <tbody>
                 <tr class="bg-info">
@@ -128,5 +128,19 @@
 
     h3 {
         color: #1b4b72;
+    }
+
+    @media screen and (max-width: 576px) {
+        h3 {
+            font-size: x-large;
+        }
+
+        .b-e {
+            font-size: small;
+        }
+
+        div.b-e {
+            line-height: 12px;
+        }
     }
 </style>

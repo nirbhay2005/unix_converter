@@ -1,13 +1,14 @@
 <template>
     <div class="mt-5">
         <h3>Convert human readable date to epoch timestamp</h3>
-        <form @submit.prevent="humanDateToEpoch">
-            <input :placeholder="defaultDate" class="shadow-sm" size="30" type="text" v-model="date">
-            <button class="btn-group btn-info" type="submit">Human Date to Timestamp</button>
-            <p class="font-weight-lighter mt-1">Input format: RFC 2822, D-M-Y, M/D/Y, Y-M-D, etc. Strip 'GMT' to convert
+        <form @submit.prevent="humanDateToEpoch" class="h-e">
+            <input :placeholder="defaultDate" class="shadow-sm h-e" size="30" type="text" v-model="date">
+            <button class="btn-group btn-info h-e" type="submit">Human Date to Timestamp</button>
+            <p class="font-weight-lighter mt-1 h-e">Input format: RFC 2822, D-M-Y, M/D/Y, Y-M-D, etc. Strip 'GMT' to
+                convert
                 to local time.</p>
         </form>
-        <div class="result-box mt-2" v-if="info.status">
+        <div class="result-box mt-2 h-e" v-if="info.status">
             <p><b>Epoch Timestamp</b> : {{info.timestamp}} </p>
             <p><b>Timestamp in milliseconds</b> : {{info.timestamp * 1000}} </p>
             <p><b>Date and time (GMT)</b>: {{info.gmt}}</p>
@@ -62,5 +63,19 @@
 
     h3 {
         color: #1b4b72;
+    }
+
+    @media screen and (max-width: 576px) {
+        h3 {
+            font-size: x-large;
+        }
+
+        .h-e {
+            font-size: small;
+        }
+
+        div.h-e {
+            line-height: 12px;
+        }
     }
 </style>

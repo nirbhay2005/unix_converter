@@ -1,21 +1,21 @@
 <template>
     <div class="mt-5">
         <h3>Convert Date to epoch timestamp</h3>
-        <form @submit.prevent="dateToEpoch">
-            <input :placeholder="defaultDate" class="shadow-sm" step="1" type="datetime-local" v-model="date">
-            <select class="shadow-sm" v-model="timezone">
-                <option selected value="gmt">GMT</option>
-                <option value="local">Local Time</option>
+        <form @submit.prevent="dateToEpoch" class="d-e">
+            <input :placeholder="defaultDate" class="shadow-sm d-e" step="1" type="datetime-local" v-model="date">
+            <select class="shadow-sm d-e" v-model="timezone">
+                <option class="d-e" selected value="gmt">GMT</option>
+                <option class="d-e" value="local">Local Time</option>
             </select>
-            <button class="btn-group btn-info" type="submit">Date to Timestamp</button>
+            <button class="btn-group btn-info d-e" type="submit">Date to Timestamp</button>
         </form>
-        <div class="result-box mt-2" v-if="response">
+        <div class="result-box mt-2 d-e" v-if="response">
             <p><b>Epoch Timestamp</b> : {{info.timestamp}} </p>
             <p><b>Timestamp in milliseconds</b> : {{info.timestamp * 1000}} </p>
             <p><b>Date and time (GMT)</b>: {{info.gmt}}</p>
             <p><b>Date and time (Your Timezone)</b> : {{info.local}}</p>
         </div>
-        <div class="error-box mt-3" v-if="error">
+        <div class="error-box mt-3 d-e" v-if="error">
             <p><b>Please select the timezone.</b></p>
         </div>
     </div>
@@ -72,5 +72,23 @@
 
     h3 {
         color: #1b4b72;
+    }
+
+    @media screen and (max-width: 576px) {
+        h3 {
+            font-size: x-large;
+        }
+
+        .d-e {
+            font-size: small;
+        }
+
+        div.d-e {
+            line-height: 12px;
+        }
+
+        select {
+            height: 25px;
+        }
     }
 </style>

@@ -23,7 +23,7 @@ Vue.component('epoch-to-human', require('./components/EpochToHuman.vue').default
 Vue.component('date-to-epoch', require('./components/DateToEpoch.vue').default)
 Vue.component('human-date-to-epoch', require('./components/HumanDateToEpoch.vue').default)
 Vue.component('begin-end', require('./components/BeginEndDate.vue').default)
-
+Vue.component('menu-list', require('./components/MenuList.vue').default)
 ;/**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
