@@ -8,7 +8,7 @@
                     <div class="dropdown-item-text font-weight-bolder" style="font-family: 'Apple Color Emoji'"><h2
                         class="header">Pages</h2></div>
                     <a class="dropdown-item font-weight-bold" href="/">Home</a>
-                    <a class="dropdown-item" href="#">Preferences</a>
+                    <a class="dropdown-item" href="/preferences">Preferences</a>
                     <div class="dropdown-header font-weight-bolder header" style="font-family: 'Apple Color Emoji'">
                         Tools
                     </div>

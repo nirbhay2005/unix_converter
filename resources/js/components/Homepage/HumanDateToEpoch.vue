@@ -2,7 +2,7 @@
     <div class="mt-5">
         <h3>Convert human readable date to epoch timestamp</h3>
         <form @submit.prevent="humanDateToEpoch" class="h-e">
-            <input :placeholder="defaultDate" class="shadow-sm h-e" size="25" type="text" v-model="date">
+            <input :placeholder="defaultDate" class="shadow-sm h-e" size="35" type="text" v-model="date">
             <button class="btn-group btn-info h-e" type="submit">Human Date to Timestamp</button>
             <button class="btn-group btn-info e-h" type="reset">Reset</button>
             <p class="font-weight-lighter mt-1 h-e">Input format: Relative date(e.g. today, tomorrow etc),
@@ -21,6 +21,8 @@
 </template>
 
 <script>
+    import SetPreference from "../../mixins/SetPreference";
+
     export default {
         name: "HumanDateToEpoch",
         data() {
@@ -29,12 +31,27 @@
                 info: '',
                 response: false,
                 date: '',
-                timezone: ''
+                format: ''
             }
         },
+        mixins: [SetPreference],
+
         computed: {
             defaultDate() {
-                return this.date = new Date().toUTCString();
+                if (this.format === 24) {
+                    return new Date().toUTCString();
+                } else {
+                    let time = new Date();
+                    return time.toDateString() + ' ' + this.formatAMPM(time, 'gmt')[0] + ' ' + this.formatAMPM(time, this.timezone)[1] + ' GMT';
+                }
+            },
+            localDate() {
+                if (this.format === 24) {
+                    return new Date().toString().substr(0, 24);
+                } else {
+                    let time = new Date();
+                    return time.toDateString() + ' ' + this.formatAMPM(time, 'local')[0] + ' ' + this.formatAMPM(time, this.timezone)[1];
+                }
             }
         },
         methods: {
@@ -52,6 +69,32 @@
                     });
                 this.response = false;
             },
+            load: function () {
+                if (localStorage.getItem('ec_tzpref') == null) {
+                    this.date = this.defaultDate;
+                } else {
+                    if (localStorage.getItem('ec_tzpref') == 2) {
+                        this.date = this.localDate;
+                    } else {
+                        this.date = this.defaultDate;
+                    }
+                }
+            },
+            checkInput: function () {
+                if (localStorage.getItem('ec_clockf') == null) {
+                    this.format = 24;
+                } else {
+                    if (localStorage.getItem('ec_clockf') == 12) {
+                        this.format = 12;
+                    } else {
+                        this.format = 24;
+                    }
+                }
+            },
+        },
+        mounted() {
+            this.checkInput()
+            this.load()
         }
     }
 </script>

@@ -2,8 +2,8 @@
     <div class="mt-5" id="menu-list">
         <h2 id="heading">Pages</h2>
         <div>
-            <a class="font-weight-bold" href="/">Home</a><br>
-            <a href="#">Preferences</a>
+            <a class="link" href="/">Home</a><br>
+            <a class="link" href="/preferences">Preferences</a>
         </div>
         <div class="mt-3">
             <p @click="showItem" class="collapsible" id="tools">Tools</p>
@@ -51,11 +51,15 @@
                     content.style.maxHeight = content.scrollHeight + "px";
                 }
             },
-        }
+        },
     }
 </script>
 
 <style scoped>
+    .link {
+        color: #1b4b72;
+    }
+
     a {
         text-decoration: none;
         color: black;

@@ -92,14 +92,24 @@
                 info: '',
                 response: false,
                 date: '',
-                timezone: 'gmt',
+                timezone: '',
                 format: 'month'
             }
         },
         computed: {
             defaultDate() {
                 let dt = new Date();
-                return this.date = dt.getFullYear() + '-' + (dt.getUTCMonth() + 1) + '-' + dt.getDate();
+                let dd = dt.getDate();
+                let mm = dt.getMonth() + 1;
+                let yyyy = dt.getFullYear();
+                if (dd < 10) {
+                    dd = '0' + dd;
+                }
+
+                if (mm < 10) {
+                    mm = '0' + mm;
+                }
+                return this.date = yyyy + '-' + mm + '-' + dd;
             }
         },
         methods: {
@@ -116,6 +126,20 @@
                     });
                 this.response = false;
             },
+            load: function () {
+                if (localStorage.getItem('ec_tzpref') == null) {
+                    this.timezone = "gmt";
+                } else {
+                    if (localStorage.getItem('ec_tzpref') == 2) {
+                        this.timezone = "local";
+                    } else {
+                        this.timezone = "gmt";
+                    }
+                }
+            },
+        },
+        mounted() {
+            this.load()
         }
     }
 </script>
