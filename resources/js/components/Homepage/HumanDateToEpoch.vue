@@ -42,7 +42,7 @@
                     return new Date().toUTCString();
                 } else {
                     let time = new Date();
-                    return time.toDateString() + ' ' + this.formatAMPM(time, 'gmt')[0] + ' ' + this.formatAMPM(time, this.timezone)[1] + ' GMT';
+                    return time.toDateString() + ' ' + this.formatAMPM(time, 'gmt')[0] + ' ' + this.formatAMPM(time, 'gmt')[1] + ' GMT';
                 }
             },
             localDate() {
@@ -50,7 +50,7 @@
                     return new Date().toString().substr(0, 24);
                 } else {
                     let time = new Date();
-                    return time.toDateString() + ' ' + this.formatAMPM(time, 'local')[0] + ' ' + this.formatAMPM(time, this.timezone)[1];
+                    return time.toDateString() + ' ' + this.formatAMPM(time, 'local')[0] + ' ' + this.formatAMPM(time, 'local')[1];
                 }
             }
         },
