@@ -15,19 +15,9 @@
 </head>
 <body>
 <div id="app" class="container">
-    <nav-bar></nav-bar>
+    <header-main></header-main>
     <clock></clock>
-    <div class="row">
-        <div class="col-sm-8">
-            <epoch-to-human></epoch-to-human>
-            <date-to-epoch></date-to-epoch>
-            <human-date-to-epoch></human-date-to-epoch>
-            <begin-end></begin-end>
-        </div>
-        <div class="col-sm-4">
-            <menu-list></menu-list>
-        </div>
-    </div>
+    <main-body></main-body>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

@@ -1,7 +1,7 @@
 <template>
-    <div class="mt-3 justify-content-lg-center border rounded">
-        <p class="mt-3 justify-content-lg-center">The current Unix Epoch time is
-            <span class="font-weight-bold"><output id="time"></output></span>
+    <div class="mt-3 justify-content-lg-center border rounded border-dark shadow">
+        <p class="mt-3 justify-content-lg-center ml-2 mr-1">The current Unix Timestamp is
+            <span class="font-weight-bold" style="text-shadow: 1px 1px grey"><output id="time"></output></span>
         </p>
     </div>
 </template>

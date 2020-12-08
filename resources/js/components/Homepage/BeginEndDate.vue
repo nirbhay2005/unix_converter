@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h3>Epoch dates for the start and end of the year/month/day</h3>
+        <h2>Get dates for the start and end of the year/month/day</h2>
         <form @submit.prevent="beginEnd">
             <p>Show start and end of <span> </span>
                 <input id="year" type="radio" v-model="format" value="year">
@@ -10,21 +10,21 @@
                 <input id="day" name="format" type="radio" v-model="format" value="day">
                 <label for="day">Day</label>
                 <br>
-                <input :placeholder="defaultDate" class="shadow-sm" type="date" v-model="date">
-                <select class="shadow-sm b-e" v-model="timezone">
+                <input :placeholder="defaultDate" class="shadow-sm rounded-lg" type="date" v-model="date">
+                <select class="shadow-sm b-e rounded-lg" v-model="timezone">
                     <option class="b-e" selected value="gmt">GMT</option>
                     <option class="b-e" value="local">Local Time</option>
                 </select>
-                <button class="btn-group btn-info" type="submit">Convert</button>
+                <button class="btn-dark rounded-lg" type="submit">Convert</button>
             </p>
         </form>
         <div class="result-box mt-2 b-e" v-if="response">
             <table border="1px solid black" v-if="format=='day'">
                 <tbody>
-                <tr class="bg-info">
+                <tr class="bg-dark">
                     <td></td>
-                    <td>Epoch</td>
-                    <td>Date and Time</td>
+                    <td class="text-white">Epoch</td>
+                    <td class="text-white">Date and Time</td>
                 </tr>
                 <tr>
                     <td>Start of day:</td>
@@ -40,10 +40,10 @@
             </table>
             <table border="1px solid black" v-else-if="format=='month'">
                 <tbody>
-                <tr class="bg-info">
+                <tr class="bg-dark">
                     <td></td>
-                    <td>Epoch</td>
-                    <td>Date and Time</td>
+                    <td class="text-white">Epoch</td>
+                    <td class="text-white">Date and Time</td>
                 </tr>
                 <tr>
                     <td>Start of month:</td>
@@ -59,10 +59,10 @@
             </table>
             <table border="1px solid black" v-else-if="format=='year'">
                 <tbody>
-                <tr class="bg-info">
+                <tr class="bg-dark">
                     <td></td>
-                    <td>Epoch</td>
-                    <td>Date and Time</td>
+                    <td class="text-white">Epoch</td>
+                    <td class="text-white">Date and Time</td>
                 </tr>
                 <tr>
                     <td>Start of year:</td>
@@ -150,12 +150,14 @@
         width: 100px;
     }
 
-    h3 {
-        color: #1b4b72;
+    h2 {
+        color: black;
+        font-weight: bold;
+        text-shadow: 2px 2px grey;
     }
 
-    @media screen and (max-width: 576px) {
-        h3 {
+    @media screen and (max-width: 414px) {
+        h2 {
             font-size: x-large;
         }
 

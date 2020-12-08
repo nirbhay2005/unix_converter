@@ -15,30 +15,9 @@
 </head>
 <body>
 <div id="app" class="container">
-    <nav-bar></nav-bar>
-    <div class="row">
-        <div class="col-sm-8 mt-5">
-            <h2>
-                <i class="fa-cog fa" aria-hidden="true"></i>
-                Set your date & time preferences
-            </h2>
-            <p>
-                These preferences are used for the tools on the homepage and other pages.
-                Your preferences are saved in your browser's local storage.
-                If you delete your cache, or use this site from another computer then the site will use the default
-                settings.
-            </p>
-            <p>
-                The default display format and language (eg. 'Your time zone' on the homepage) is based on your
-                computer/browser settings.
-            </p>
-            <p>Press F5 to refresh the website if your settings do not work right away.</p>
-            <pref-form></pref-form>
-        </div>
-        <div class="col-sm-4">
-            <menu-list></menu-list>
-        </div>
-    </div>
+    <header-main></header-main>
+    <clock></clock>
+    <pref-body></pref-body>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>

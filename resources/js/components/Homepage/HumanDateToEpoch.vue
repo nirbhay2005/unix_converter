@@ -1,10 +1,11 @@
 <template>
     <div class="mt-5">
-        <h3>Convert human readable date to epoch timestamp</h3>
+        <h2>Convert human readable date to Unix Timestamp</h2>
         <form @submit.prevent="humanDateToEpoch" class="h-e">
-            <input :placeholder="defaultDate" class="shadow-sm h-e" size="35" type="text" v-model="date">
-            <button class="btn-group btn-info h-e" type="submit">Human Date to Timestamp</button>
-            <button class="btn-group btn-info e-h" type="reset">Reset</button>
+            <input :placeholder="defaultDate" class="shadow-sm h-e rounded-lg" required size="35" type="text"
+                   v-model="date">
+            <button class="btn-dark h-e rounded-lg" type="submit">Date to Timestamp</button>
+            <button class="btn-dark e-h rounded-lg" type="reset">Reset</button>
             <p class="font-weight-lighter mt-1 h-e">Input format: Relative date(e.g. today, tomorrow etc),
                 RFC 2822, D-M-Y, M/D/Y, Y-M-D, etc. Strip 'GMT' to convert to local time.</p>
         </form>
@@ -104,12 +105,14 @@
         line-height: normal;
     }
 
-    h3 {
-        color: #1b4b72;
+    h2 {
+        color: black;
+        font-weight: bold;
+        text-shadow: 2px 2px grey;
     }
 
     @media screen and (max-width: 576px) {
-        h3 {
+        h2 {
             font-size: x-large;
         }
 

@@ -1,18 +1,18 @@
 <template>
-    <div class="mt-5">
-        <h3>Convert Date to epoch timestamp</h3>
+    <div>
+        <h2>Convert Date to Unix Timestamp</h2>
         <form @submit.prevent="dateToEpoch" class="d-e">
-            <input :placeholder="defaultDate" class="shadow-sm d-e" id="date" step="1" type="datetime-local"
+            <input :placeholder="defaultDate" class="shadow-sm d-e rounded-lg" id="date" step="1" type="datetime-local"
                    v-model="date">
-            <select class="shadow-sm d-e" id="date-format" v-model="meridian">
+            <select class="shadow-sm d-e rounded-lg" id="date-format" v-model="meridian">
                 <option class="d-e" value="AM">AM</option>
                 <option class="d-e" value="PM">PM</option>
             </select>
-            <select class="shadow-sm d-e" v-model="timezone">
+            <select class="shadow-sm d-e rounded-lg" v-model="timezone">
                 <option class="d-e" value="gmt">GMT</option>
                 <option class="d-e" value="local">Local Time</option>
             </select>
-            <button class="btn-group btn-info d-e" type="submit">Date to Timestamp</button>
+            <button class="btn-dark d-e rounded-lg" type="submit">Date to Timestamp</button>
         </form>
         <div class="result-box mt-2 d-e" v-if="response">
             <p><b>Epoch Timestamp</b> : {{info.timestamp}} </p>
@@ -140,12 +140,14 @@
         line-height: normal;
     }
 
-    h3 {
-        color: #1b4b72;
+    h2 {
+        color: black;
+        font-weight: bold;
+        text-shadow: 2px 2px grey;
     }
 
-    @media screen and (max-width: 576px) {
-        h3 {
+    @media screen and (max-width: 414px) {
+        h2 {
             font-size: x-large;
         }
 

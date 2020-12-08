@@ -1,11 +1,11 @@
 <template>
-    <div class="mt-5">
-        <h3>Convert epoch timestamp to human-readable date</h3>
+    <div class="e-h">
+        <h2>Convert Unix Timestamp to Date</h2>
         <form @submit.prevent="epochToHuman" class="mt-3 e-h">
-            <input :placeholder="stamp" class="shadow-sm e-h" size="12" v-model="timestamp">
-            <button class="btn-group btn-info e-h" type="submit">Timestamp to Date</button>
-            <button class="btn-group btn-info e-h" type="reset">Reset</button>
-            <p class="e-h">Supports Unix timestamps in seconds and milliseconds.</p>
+            <input :placeholder="stamp" class="shadow-sm e-h rounded-lg" required size="12" v-model="timestamp">
+            <button class="btn-dark rounded-lg" type="submit">Timestamp to Date</button>
+            <button class="btn-dark rounded-lg" type="reset">Reset</button>
+            <p class="e-h mt-2">Supports Unix timestamps in seconds and milliseconds.</p>
         </form>
         <div class="result-box e-h mt-0" v-if="response">
             <p>Assuming that this timestamp is in <b>{{info.unit}}</b>:</p>
@@ -60,23 +60,25 @@
     div.result-box {
         line-height: normal;
         overflow: auto;
-
     }
 
     div.error-box {
         line-height: normal;
     }
 
-    h3 {
-        color: #1b4b72;
+    h2 {
+        color: black;
+        font-weight: bold;
+        text-shadow: 2px 2px grey;
     }
 
-    @media screen and (max-width: 576px) {
-        h3 {
+    @media screen and (max-width: 414px) {
+        h2 {
             font-size: x-large;
         }
 
         .e-h {
+            margin-top: 10px;
             font-size: small;
         }
 
