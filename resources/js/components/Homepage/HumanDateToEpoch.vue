@@ -93,7 +93,7 @@
                 }
             },
         },
-        mounted() {
+        created() {
             this.checkInput()
             this.load()
         }

@@ -16,12 +16,12 @@
                         <br>
                         <label>
                             <input class="p-f" id="clockf" name="ec_clockf" type="radio" value="12">
-                            Force 12-hour clock (AM/PM)
+                            12-hour (AM/PM)
                         </label>
                         <br>
                         <label>
                             <input class="p-f" id="clockf" name="ec_clockf" type="radio" value="24">
-                            Force 24-hour clock
+                            24-hour
                         </label>
                         <br>
                     </td>

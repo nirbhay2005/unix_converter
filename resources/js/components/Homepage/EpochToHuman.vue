@@ -49,9 +49,6 @@
                     });
                 this.response = false;
             },
-            showDate() {
-                this.display = "block";
-            }
         }
     }
 </script>
