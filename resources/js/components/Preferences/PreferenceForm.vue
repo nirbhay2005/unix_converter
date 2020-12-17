@@ -2,6 +2,7 @@
     <div>
         <form @submit.prevent="setPrefs" id="preferencesForm" name="preferencesForm">
             <h2>Date-time input format in converters</h2>
+            <p>Set date-time input format and timezone for all the converters as per your choice.</p>
             <table class="col-sm-12">
                 <tbody>
                 <tr class="row">

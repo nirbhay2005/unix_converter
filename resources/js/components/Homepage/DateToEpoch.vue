@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mt-1">
         <h2>Convert Date to Unix Timestamp</h2>
         <form @submit.prevent="dateToEpoch" class="d-e">
             <input :placeholder="defaultDate" class="shadow-sm d-e rounded-lg" id="date" step="1" type="datetime-local"
@@ -8,19 +8,19 @@
                 <option class="d-e" value="AM">AM</option>
                 <option class="d-e" value="PM">PM</option>
             </select>
-            <select class="shadow-sm d-e rounded-lg" v-model="timezone">
+            <select class="shadow-sm d-e rounded-lg" id="timezone" v-model="timezone">
                 <option class="d-e" value="gmt">GMT</option>
                 <option class="d-e" value="local">Local Time</option>
-            </select>
-            <button class="btn-dark d-e rounded-lg" type="submit">Date to Timestamp</button>
+            </select><br>
+            <button class="btn-dark d-e rounded-lg mt-2" id="submit" type="submit">Convert to Timestamp</button>
         </form>
-        <div class="result-box mt-2 d-e" v-if="response">
-            <p><b>Epoch Timestamp</b> : {{info.timestamp}} </p>
+        <div class="result-box mt-2" v-if="response">
+            <p><b>Unix Timestamp</b> : {{info.timestamp}} </p>
             <p><b>Timestamp in milliseconds</b> : {{info.timestamp * 1000}} </p>
             <p><b>Date and time (GMT)</b>: {{info.gmt}}</p>
             <p><b>Date and time (Your Timezone)</b> : {{info.local}}</p>
         </div>
-        <div class="error-box mt-3 d-e" v-if="error">
+        <div class="error-box mt-2 " v-if="error">
             <p><b>Please select valid date/timezone.</b></p>
         </div>
     </div>
@@ -123,13 +123,23 @@
 </script>
 
 <style scoped>
+    #date {
+        height: 40px;
+        width: 250px;
+    }
+
     #date-format {
+        height: 40px;
         width: fit-content;
     }
 
-    select {
-        height: 30px;
-        width: 100px;
+    #timezone {
+        height: 40px;
+    }
+
+    #submit {
+        width: 250px;
+        height: 40px;
     }
 
     div.result-box {
@@ -147,6 +157,33 @@
     }
 
     @media screen and (max-width: 414px) {
+        #date {
+            width: 185px;
+            height: 30px;
+        }
+
+        #date-format {
+            height: 30px;
+        }
+
+        #timezone {
+            margin-top: 10px;
+            height: 30px;
+        }
+
+        #submit {
+            width: 185px;
+            height: 30px;
+        }
+
+        .result-box {
+            font-size: x-small;
+        }
+
+        .error-box {
+            font-size: x-small;
+        }
+
         h2 {
             font-size: x-large;
         }
@@ -157,10 +194,6 @@
 
         div.d-e {
             line-height: 12px;
-        }
-
-        select {
-            height: 25px;
         }
     }
 </style>

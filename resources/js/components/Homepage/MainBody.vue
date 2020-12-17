@@ -1,6 +1,6 @@
 <template>
-    <div class="mt-5 container row">
-        <div class="border sidebar rounded shadow col-sm-4">
+    <div class="mt-4 ml-4 mr-4 row">
+        <div class="border sidebar mr-4 rounded shadow col-sm-3">
             <div class="shadow-sm rounded">
                 <a class="active t1" href="/"> Timestamp to Date Converter</a>
             </div>
@@ -15,7 +15,7 @@
             </div>
         </div>
 
-        <div class="col-sm-8 content mt-3">
+        <div class="col-sm-8 content ml-1 mr-1">
             <epoch-to-human class="r1"></epoch-to-human>
             <date-to-epoch class="r2"></date-to-epoch>
             <human-date-to-epoch class="r2"></human-date-to-epoch>
@@ -43,7 +43,7 @@
                 });
                 $(".t2").click(function () {
                     $(".r1").hide();
-                    $(".r2").show();
+                    $(".r2").fadeIn(1000);
                     $(".r3").hide();
                     $(".r4").hide();
                     $(".t1").removeClass("active");
@@ -54,7 +54,7 @@
                 $(".t3").click(function () {
                     $(".r1").hide();
                     $(".r2").hide();
-                    $(".r3").show();
+                    $(".r3").fadeIn(1000);
                     $(".r4").hide();
                     $(".t1").removeClass("active");
                     $(".t2").removeClass("active");
@@ -100,8 +100,8 @@
     .sidebar {
         margin: 0;
         padding: 0;
+        width: fit-content;
         background-color: #f1f1f1;
-        width: 5px;
         height: fit-content;
         overflow: auto;
     }

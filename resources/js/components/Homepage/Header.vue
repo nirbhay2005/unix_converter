@@ -1,5 +1,5 @@
 <template>
-    <div class="bg rounded-bottom fixed-top">
+    <div class="bg ml-4 mr-4 rounded-bottom">
         <div class="heading"><a href="/"><b>Unix</b> <i>Converter</i></a></div>
     </div>
 </template>
@@ -36,12 +36,12 @@
     @media only screen and (min-width: 415px) {
         div.bg {
             background-image: url('/img/clock.jpg');
-            height: 120px;
+            height: 150px;
         }
 
         a {
             color: white;
-            font-size: xx-large;
+            font-size: 50px;
         }
     }
 </style>

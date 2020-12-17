@@ -2,20 +2,21 @@
     <div class="mt-5">
         <h2>Convert human readable date to Unix Timestamp</h2>
         <form @submit.prevent="humanDateToEpoch" class="h-e">
-            <input :placeholder="defaultDate" class="shadow-sm h-e rounded-lg" required size="35" type="text"
+            <input :placeholder="defaultDate" class="shadow-sm h-e rounded-lg" id="date" required type="text"
                    v-model="date">
-            <button class="btn-dark h-e rounded-lg" type="submit">Date to Timestamp</button>
-            <button class="btn-dark e-h rounded-lg" type="reset">Reset</button>
-            <p class="font-weight-lighter mt-1 h-e">Input format: Relative date(e.g. today, tomorrow etc),
+            <button class="btn-dark rounded-lg" id="reset" type="reset">Reset</button>
+            <br>
+            <button class="btn-dark h-e rounded-lg mt-2" id="submit" type="submit">Convert to Timestamp</button>
+            <p class="font-weight-lighter mt-1 note">Input format: Relative date(e.g. today, tomorrow etc),
                 RFC 2822, D-M-Y, M/D/Y, Y-M-D, etc. Strip 'GMT' to convert to local time.</p>
         </form>
-        <div class="result-box mt-2 h-e" v-if="info.status">
-            <p><b>Epoch Timestamp</b> : {{info.timestamp}} </p>
+        <div class="result-box mt-2" v-if="info.status">
+            <p><b>Unix Timestamp</b> : {{info.timestamp}} </p>
             <p><b>Timestamp in milliseconds</b> : {{info.timestamp * 1000}} </p>
             <p><b>Date and time (GMT)</b>: {{info.gmt}}</p>
             <p><b>Date and time (Your Timezone)</b> : {{info.local}}</p>
         </div>
-        <div v-else>
+        <div class="result-box mt-2" v-else>
             <p><b>{{info.timestamp}}</b></p>
         </div>
     </div>
@@ -101,6 +102,21 @@
 </script>
 
 <style scoped>
+    #date {
+        height: 40px;
+        width: 250px;
+        font-size: 14px;
+    }
+
+    #reset {
+        height: 40px;
+    }
+
+    #submit {
+        height: 40px;
+        width: 250px;
+    }
+
     div.result-box {
         line-height: normal;
     }
@@ -111,9 +127,32 @@
         text-shadow: 2px 2px grey;
     }
 
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 414px) {
+        #date {
+            width: 185px;
+            height: 30px;
+            font-size: 11px;
+        }
+
+        #reset {
+            height: 30px;
+        }
+
+        #submit {
+            width: 185px;
+            height: 30px;
+        }
+
         h2 {
             font-size: x-large;
+        }
+
+        .result-box {
+            font-size: x-small;
+        }
+
+        .note {
+            font-size: x-small;
         }
 
         .h-e {

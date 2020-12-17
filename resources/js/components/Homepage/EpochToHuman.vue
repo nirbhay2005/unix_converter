@@ -2,18 +2,19 @@
     <div class="e-h">
         <h2>Convert Unix Timestamp to Date</h2>
         <form @submit.prevent="epochToHuman" class="mt-3 e-h">
-            <input :placeholder="stamp" class="shadow-sm e-h rounded-lg" required size="12" v-model="timestamp">
-            <button class="btn-dark rounded-lg" type="submit">Timestamp to Date</button>
-            <button class="btn-dark rounded-lg" type="reset">Reset</button>
-            <p class="e-h mt-2">Supports Unix timestamps in seconds and milliseconds.</p>
+            <input :placeholder="stamp" class="shadow-sm e-h rounded-lg" id="input" required size="12"
+                   v-model="timestamp">
+            <button class="btn-dark rounded-lg" id="reset" type="reset">Reset</button>
+            <br>
+            <button class="btn-dark rounded-lg mt-2" id="submit" type="submit">Convert to Date</button>
         </form>
-        <div class="result-box e-h mt-0" v-if="response">
+        <div class="result-box mt-2" v-if="response">
             <p>Assuming that this timestamp is in <b>{{info.unit}}</b>:</p>
-            <p><b>GMT</b> : {{info.gmt}} </p>
-            <p><b>Your Timezone</b>: {{info.local}}</p>
+            <p><b>Date and Time (GMT)</b> : {{info.gmt}} </p>
+            <p><b>Date and Time (Your Timezone)</b>: {{info.local}}</p>
             <p><b>Relative</b> : {{info.relative}}</p>
         </div>
-        <div class="error-box e-h" v-if="error">
+        <div class="error-box mt-2" v-if="error">
             <p>Sorry, this timestamp is not valid.</p>
             <p>Check your timestamp, strip letters and punctuation marks.</p>
         </div>
@@ -54,6 +55,19 @@
 </script>
 
 <style scoped>
+    #input {
+        height: 40px;
+    }
+
+    #reset {
+        height: 40px;
+    }
+
+    #submit {
+        height: 40px;
+        width: 200px;
+    }
+
     div.result-box {
         line-height: normal;
         overflow: auto;
@@ -70,8 +84,30 @@
     }
 
     @media screen and (max-width: 414px) {
+        #input {
+            height: 30px;
+        }
+
+        #reset {
+            height: 30px;
+        }
+
+        #submit {
+            width: 175px;
+            height: 30px;
+        }
+
         h2 {
             font-size: x-large;
+        }
+
+        .result-box {
+            font-size: x-small;
+        }
+
+        .result-box {
+            font-size: x-small;
+            line-height: 0px;
         }
 
         .e-h {

@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <h2>Get dates for the start and end of the year/month/day</h2>
+    <div class="mt-1">
+        <h2>Get timestamp for the start and end of the year/month/day</h2>
         <form @submit.prevent="beginEnd">
             <p>Show start and end of <span> </span>
                 <input id="year" type="radio" v-model="format" value="year">
@@ -10,20 +10,20 @@
                 <input id="day" name="format" type="radio" v-model="format" value="day">
                 <label for="day">Day</label>
                 <br>
-                <input :placeholder="defaultDate" class="shadow-sm rounded-lg" type="date" v-model="date">
-                <select class="shadow-sm b-e rounded-lg" v-model="timezone">
+                <input :placeholder="defaultDate" class="shadow-sm rounded-lg" id="date" type="date" v-model="date">
+                <select class="shadow-sm b-e rounded-lg" id="timezone" v-model="timezone">
                     <option class="b-e" selected value="gmt">GMT</option>
                     <option class="b-e" value="local">Local Time</option>
-                </select>
-                <button class="btn-dark rounded-lg" type="submit">Convert</button>
+                </select><br>
+                <button class="btn-dark rounded-lg mt-2" id="submit" type="submit">Convert to Timestamp</button>
             </p>
         </form>
-        <div class="result-box mt-2 b-e" v-if="response">
+        <div class="result-box mt-2" v-if="response">
             <table border="1px solid black" v-if="format=='day'">
                 <tbody>
                 <tr class="bg-dark">
                     <td></td>
-                    <td class="text-white">Epoch</td>
+                    <td class="text-white">Timestamp</td>
                     <td class="text-white">Date and Time</td>
                 </tr>
                 <tr>
@@ -42,7 +42,7 @@
                 <tbody>
                 <tr class="bg-dark">
                     <td></td>
-                    <td class="text-white">Epoch</td>
+                    <td class="text-white">Timestamp</td>
                     <td class="text-white">Date and Time</td>
                 </tr>
                 <tr>
@@ -61,7 +61,7 @@
                 <tbody>
                 <tr class="bg-dark">
                     <td></td>
-                    <td class="text-white">Epoch</td>
+                    <td class="text-white">Timestamp</td>
                     <td class="text-white">Date and Time</td>
                 </tr>
                 <tr>
@@ -145,9 +145,18 @@
 </script>
 
 <style scoped>
-    select {
-        height: 30px;
-        width: 100px;
+    #date {
+        height: 40px;
+        width: 145px;
+    }
+
+    #timezone {
+        height: 40px;
+    }
+
+    #submit {
+        width: 250px;
+        height: 40px;
     }
 
     h2 {
@@ -157,6 +166,34 @@
     }
 
     @media screen and (max-width: 414px) {
+        #date {
+            width: 115px;
+            height: 30px;
+        }
+
+        #timezone {
+            margin-top: 10px;
+            height: 30px;
+            width: 65px;
+        }
+
+        #submit {
+            width: 185px;
+            height: 30px;
+        }
+
+        .result-box {
+            font-size: x-small;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        label {
+            font-size: 12px;
+        }
+
         h2 {
             font-size: x-large;
         }
