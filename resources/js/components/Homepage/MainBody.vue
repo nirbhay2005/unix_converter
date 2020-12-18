@@ -2,10 +2,10 @@
     <div class="mt-4 ml-4 mr-4 row">
         <div class="border sidebar mr-4 rounded shadow col-sm-3">
             <div class="shadow-sm rounded">
-                <a class="active t1" href="/"> Timestamp to Date Converter</a>
+                <a class="active t1" href="/"> Date to Timestamp Converter</a>
             </div>
             <div class="shadow-sm rounded">
-                <a class="t2">Date to Timestamp Converter</a>
+                <a class="t2">Timestamp to Date Converter</a>
             </div>
             <div class="shadow-sm rounded">
                 <a class="t3">Timestamp for Interval</a>
@@ -16,9 +16,9 @@
         </div>
 
         <div class="col-sm-8 content ml-1 mr-1">
-            <epoch-to-human class="r1"></epoch-to-human>
-            <date-to-epoch class="r2"></date-to-epoch>
-            <human-date-to-epoch class="r2"></human-date-to-epoch>
+            <date-to-epoch class="r1"></date-to-epoch>
+            <human-date-to-epoch class="r1"></human-date-to-epoch>
+            <epoch-to-human class="r2"></epoch-to-human>
             <begin-end class="r3"></begin-end>
             <pref-form class="r4"></pref-form>
         </div>

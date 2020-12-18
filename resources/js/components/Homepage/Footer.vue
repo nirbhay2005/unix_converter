@@ -1,8 +1,9 @@
 <template>
     <div>
         <div class="mt-3 ml-3 mr-3 rounded border bg-transparent shadow">
-            <h4><b>What is Unix Timestamp?</b></h4>
-            <p>Unix timestamp is a system for describing a point in time. It is the number of seconds that have elapsed
+            <h4 class="mt-2 ml-2"><b>What is Unix Timestamp?</b></h4>
+            <p class="ml-2">Unix timestamp is a system for describing a point in time. It is the number of seconds that
+                have elapsed
                 since the Unix epoch,
                 the Unix epoch is <b>00:00:00 UTC on 1 January 1970</b> (an arbitrary date). A Unix timestamp is
                 interpreted the same regardless of
@@ -11,12 +12,13 @@
                 over multiple timezones and you need date/time to reflect individual users' settings, use a unix
                 timestamp.
             </p><br>
-            <h4><b>What is the limit of Unix Timestamp?</b></h4>
-            <p>Unix Time is represented by a 32 bit whole number (an integer) that can be positive or negative (signed).
+            <h4 class="ml-2"><b>What is the limit of Unix Timestamp?</b></h4>
+            <p class="ml-2">Unix Time is represented by a 32 bit whole number (an integer) that can be positive or
+                negative (signed).
                 Unix was originally developed in the 60s and 70s so the "start" of Unix Time was set to January 1st 1970
                 at midnight GMT (Greenwich Mean Time) - this date/time was assigned the Unix Time value of 0.
                 This is what is known as the Unix Epoch.</p>
-            <p>
+            <p class="ml-2">
                 A 32 bit signed integer can represent whole numbers between -2147483648 and 2147483647. Since Unix Time
                 starts at 0, negative Unix Time values go back in time from the Epoch and positive numbers go forward in
                 time. This means that Unix Time spans from Unix Time value of -2147483648 or 20:45:52 GMT on December
@@ -25,7 +27,7 @@
                 beginning,
                 the pre-history and the end of Unix Time.
             </p>
-            <p>
+            <p class="ml-2">
                 The end of Unix Time will occur on January 19, 2038 03:14:07 GMT. On January 19, 2038 03:14:08 GMT all
                 computers that still use 32 bit Unix Time will overflow. This is known as the "Year 2038 problem". Some
                 believe this will be a more significant problem than the "Year 2000 problem". The fix for the Year 2038
