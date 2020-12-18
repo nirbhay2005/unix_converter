@@ -1,12 +1,12 @@
 <template>
-    <div class="e-h">
+    <div class="mt-1">
         <h2>Convert Unix Timestamp to Date</h2>
         <form @submit.prevent="epochToHuman" class="mt-3 e-h">
             <input :placeholder="stamp" class="shadow-sm e-h rounded-lg" id="input" required size="12"
                    v-model="timestamp">
-            <button class="btn-dark rounded-lg" id="reset" type="reset">Reset</button>
+            <button class="btn-success rounded-lg" id="reset" type="reset">Reset</button>
             <br>
-            <button class="btn-dark rounded-lg mt-2" id="submit" type="submit">Convert to Date</button>
+            <button class="btn-success rounded-lg mt-2" id="submit" type="submit">Convert to Date</button>
         </form>
         <div class="result-box mt-2" v-if="response">
             <p>Assuming that this timestamp is in <b>{{info.unit}}</b>:</p>
@@ -78,9 +78,8 @@
     }
 
     h2 {
-        color: black;
+        color: #1b4b72;
         font-weight: bold;
-        text-shadow: 2px 2px grey;
     }
 
     @media screen and (max-width: 414px) {

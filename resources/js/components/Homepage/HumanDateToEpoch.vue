@@ -1,12 +1,12 @@
 <template>
-    <div class="mt-5">
+    <div class="mt-1">
         <h2>Convert human readable date to Unix Timestamp</h2>
         <form @submit.prevent="humanDateToEpoch" class="h-e">
             <input :placeholder="defaultDate" class="shadow-sm h-e rounded-lg" id="date" required type="text"
                    v-model="date">
-            <button class="btn-dark rounded-lg" id="reset" type="reset">Reset</button>
+            <button class="btn-success rounded-lg" id="reset" type="reset">Reset</button>
             <br>
-            <button class="btn-dark h-e rounded-lg mt-2" id="submit" type="submit">Convert to Timestamp</button>
+            <button class="btn-success h-e rounded-lg mt-2" id="submit" type="submit">Convert to Timestamp</button>
             <p class="font-weight-lighter mt-1 note">Input format: Relative date(e.g. today, tomorrow etc),
                 RFC 2822, D-M-Y, M/D/Y, Y-M-D, etc. Strip 'GMT' to convert to local time.</p>
         </form>
@@ -122,9 +122,8 @@
     }
 
     h2 {
-        color: black;
+        color: #1b4b72;
         font-weight: bold;
-        text-shadow: 2px 2px grey;
     }
 
     @media screen and (max-width: 414px) {

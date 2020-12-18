@@ -1,6 +1,6 @@
 <template>
     <div class="bg ml-4 mr-4 rounded-bottom">
-        <div class="heading"><a href="/"><b>Unix</b> <i>Converter</i></a></div>
+        <div class="heading"><a href="/"><b>UNIX</b> <i>Converter</i></a></div>
     </div>
 </template>
 
@@ -15,8 +15,7 @@
         position: relative;
         max-width: 100%;
         height: 80px;
-        background-image: url('/img/clock-small.jpg');
-        background-size: 100% 100%;
+        background-image: linear-gradient(#1b4b72, royalblue);
     }
 
     .heading {
@@ -35,8 +34,8 @@
 
     @media only screen and (min-width: 415px) {
         div.bg {
-            background-image: url('/img/clock.jpg');
             height: 150px;
+            background-image: linear-gradient(#1b4b72, royalblue);
         }
 
         a {

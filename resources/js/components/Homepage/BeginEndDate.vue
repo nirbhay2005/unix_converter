@@ -15,13 +15,13 @@
                     <option class="b-e" selected value="gmt">GMT</option>
                     <option class="b-e" value="local">Local Time</option>
                 </select><br>
-                <button class="btn-dark rounded-lg mt-2" id="submit" type="submit">Convert to Timestamp</button>
+                <button class="btn-success rounded-lg mt-2" id="submit" type="submit">Convert to Timestamp</button>
             </p>
         </form>
         <div class="result-box mt-2" v-if="response">
             <table border="1px solid black" v-if="format=='day'">
                 <tbody>
-                <tr class="bg-dark">
+                <tr class="h-row">
                     <td></td>
                     <td class="text-white">Timestamp</td>
                     <td class="text-white">Date and Time</td>
@@ -40,7 +40,7 @@
             </table>
             <table border="1px solid black" v-else-if="format=='month'">
                 <tbody>
-                <tr class="bg-dark">
+                <tr class="h-row">
                     <td></td>
                     <td class="text-white">Timestamp</td>
                     <td class="text-white">Date and Time</td>
@@ -59,7 +59,7 @@
             </table>
             <table border="1px solid black" v-else-if="format=='year'">
                 <tbody>
-                <tr class="bg-dark">
+                <tr class="h-row">
                     <td></td>
                     <td class="text-white">Timestamp</td>
                     <td class="text-white">Date and Time</td>
@@ -159,10 +159,13 @@
         height: 40px;
     }
 
+    .h-row {
+        background-color: #1b4b72;
+    }
+
     h2 {
-        color: black;
+        color: #1b4b72;
         font-weight: bold;
-        text-shadow: 2px 2px grey;
     }
 
     @media screen and (max-width: 414px) {

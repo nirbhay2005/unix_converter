@@ -1,7 +1,7 @@
 <template>
     <div class="mt-3 ml-4 mr-4 mb-2 border rounded shadow-sm">
         <p class="mt-3 ml-2 mr-1 mb-2">Current Unix Timestamp:
-            <span class="font-weight-bold" style="text-shadow: 1px 1px grey"><label
+            <span class="stamp" style="text-shadow: 1px 1px grey"><label
                 id="time">{{timestamp}}</label></span>
         </p>
     </div>
@@ -31,7 +31,13 @@
 </script>
 
 <style scoped>
+    .stamp {
+        color: #2d995b;
+        font-weight: bold;
+    }
+
     p {
+        color: #1b4b72;
         text-align: center;
         font-size: large;
     }

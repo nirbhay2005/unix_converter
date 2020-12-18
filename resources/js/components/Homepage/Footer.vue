@@ -49,6 +49,10 @@
 </script>
 
 <style scoped>
+    b {
+        color: #1b4b72;
+    }
+
     div {
         padding: 12px;
     }

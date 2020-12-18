@@ -12,7 +12,7 @@
                 <option class="d-e" value="gmt">GMT</option>
                 <option class="d-e" value="local">Local Time</option>
             </select><br>
-            <button class="btn-dark d-e rounded-lg mt-2" id="submit" type="submit">Convert to Timestamp</button>
+            <button class="btn-success d-e rounded-lg mt-2" id="submit" type="submit">Convert to Timestamp</button>
         </form>
         <div class="result-box mt-2" v-if="response">
             <p><b>Unix Timestamp</b> : {{info.timestamp}} </p>
@@ -151,9 +151,8 @@
     }
 
     h2 {
-        color: black;
+        color: #1b4b72;
         font-weight: bold;
-        text-shadow: 2px 2px grey;
     }
 
     @media screen and (max-width: 414px) {
