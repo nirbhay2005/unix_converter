@@ -171,6 +171,11 @@
     }
 
     @media screen and (max-width: 414px) {
+        .sidebar {
+            margin-left: 25px;
+            margin-bottom: 10px;
+        }
+
         .sidebar a {
             text-align: center;
             float: none;
