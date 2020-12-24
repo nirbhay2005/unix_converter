@@ -27,3 +27,5 @@ Route::post('/timestamp', 'EpochController@getTimestampFromDate');
 Route::post('/timestamp-human', 'EpochController@getTimestampFromHumanDate');
 
 Route::post('/begin-end', 'EpochController@getBeginEndOfInterval');
+
+Route::post('/timezone', 'EpochController@getDateForTimezone');

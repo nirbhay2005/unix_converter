@@ -11,7 +11,10 @@
                 <a class="t3">Timestamp for Interval</a>
             </div>
             <div class="shadow-sm rounded">
-                <a class="t4" href="/preferences">Preferences</a>
+                <a class="t4">Timezone Converter</a>
+            </div>
+            <div class="shadow-sm rounded">
+                <a class="t5" href="/preferences">Preferences</a>
             </div>
         </div>
 
@@ -20,7 +23,8 @@
             <human-date-to-epoch class="r1"></human-date-to-epoch>
             <epoch-to-human class="r2"></epoch-to-human>
             <begin-end class="r3"></begin-end>
-            <pref-form class="r4"></pref-form>
+            <tz-converter class="r4"></tz-converter>
+            <pref-form class="r5"></pref-form>
         </div>
     </div>
 </template>
@@ -35,41 +39,60 @@
                     $(".r2").hide();
                     $(".r3").hide();
                     $(".r4").hide();
+                    $(".r5").hide();
                     $(".t1").addClass("active");
                     $(".t2").removeClass("active");
                     $(".t3").removeClass("active");
                     $(".t4").removeClass("active");
-
+                    $(".t5").removeClass("active");
                 });
                 $(".t2").click(function () {
                     $(".r1").hide();
                     $(".r2").fadeIn(1000);
                     $(".r3").hide();
                     $(".r4").hide();
+                    $(".r5").hide();
                     $(".t1").removeClass("active");
                     $(".t2").addClass("active");
                     $(".t3").removeClass("active");
                     $(".t4").removeClass("active");
+                    $(".t5").removeClass("active");
                 });
                 $(".t3").click(function () {
                     $(".r1").hide();
                     $(".r2").hide();
                     $(".r3").fadeIn(1000);
                     $(".r4").hide();
+                    $(".r5").hide();
                     $(".t1").removeClass("active");
                     $(".t2").removeClass("active");
                     $(".t3").addClass("active");
                     $(".t4").removeClass("active");
+                    $(".t5").removeClass("active");
                 });
                 $(".t4").click(function () {
                     $(".r1").hide();
                     $(".r2").hide();
                     $(".r3").hide();
-                    $(".r4").show();
+                    $(".r4").fadeIn(1000);
+                    $(".r5").hide();
                     $(".t1").removeClass("active");
                     $(".t2").removeClass("active");
                     $(".t3").removeClass("active");
                     $(".t4").addClass("active");
+                    $(".t5").removeClass("active");
+                });
+                $(".t5").click(function () {
+                    $(".r1").hide();
+                    $(".r2").hide();
+                    $(".r3").hide();
+                    $(".r4").hide();
+                    $(".r5").show();
+                    $(".t1").removeClass("active");
+                    $(".t2").removeClass("active");
+                    $(".t3").removeClass("active");
+                    $(".t4").removeClass("active");
+                    $(".t5").addClass("active");
                 });
             }
         },
@@ -94,6 +117,10 @@
     }
 
     .r4 {
+        display: none;
+    }
+
+    .r5 {
         display: none;
     }
 

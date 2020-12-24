@@ -27,6 +27,9 @@ Vue.component('begin-end', require('./components/Homepage/BeginEndDate.vue').def
 Vue.component('menu-list', require('./components/Homepage/MenuList.vue').default)
 Vue.component('main-body', require('./components/Homepage/MainBody.vue').default)
 Vue.component('footer-main', require('./components/Homepage/Footer.vue').default)
+Vue.component('tz-converter', require('./components/Homepage/TimezoneConverter.vue').default)
+Vue.component('tz-list', require('./components/Homepage/TimezoneList.vue').default)
+
 
 Vue.component('pref-form', require('./components/Preferences/PreferenceForm.vue').default)
 Vue.component('pref-body', require('./components/Preferences/PrefBody.vue').default)

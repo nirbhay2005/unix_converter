@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\BeginEndDateRequest;
 use App\Http\Requests\DateToTimestampRequest;
 use App\Http\Requests\TimestampToDateRequest;
+use App\Http\Requests\TimezoneConvertRequest;
 use App\Models\EpochConverter;
 use App\Repositories\EpochRepository;
 use Illuminate\Http\Request;
@@ -40,6 +41,13 @@ class EpochController extends ApiController
 
         $this->jobMethod = 'getBeginEnd';
         $this->customRequest = BeginEndDateRequest::class;
+        return $this->handleCustomEndPoint(BaseJob::class, $request);
+    }
+
+    public function getDateForTimezone(Request $request)
+    {
+        $this->jobMethod = 'getDateForTimezone';
+        $this->customRequest = TimezoneConvertRequest::class;
         return $this->handleCustomEndPoint(BaseJob::class, $request);
     }
 }

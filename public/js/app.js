@@ -2316,13 +2316,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-            /* harmony default export */
-            __webpack_exports__["default"] = ({
-                name: "Footer"
-            });
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "Footer"
+});
 
-            /***/
-        }),
+/***/ }),
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/Header.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************************!*\
@@ -2365,22 +2363,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-                name: "HeaderClock",
-                computed: {
-                    timestamp: function timestamp() {
-                        return Math.floor(Date.now() / 1000);
-                    }
-                },
-                beforeCreate: function beforeCreate() {
-                    function updateTime() {
-                        var timestamp = Math.floor(Date.now() / 1000);
-                        $('#time').html(timestamp);
-                        timestamp++;
-                    }
+  name: "HeaderClock",
+  computed: {
+    timestamp: function timestamp() {
+      return Math.floor(Date.now() / 1000);
+    }
+  },
+  beforeCreate: function beforeCreate() {
+    function updateTime() {
+      var timestamp = Math.floor(Date.now() / 1000);
+      $('#time').html(timestamp);
+      timestamp++;
+    }
 
-                    $(function () {
-                        setInterval(updateTime, 1000);
-                    });
+    $(function () {
+      setInterval(updateTime, 1000);
+    });
   }
 });
 
@@ -2535,6 +2533,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "MainBody",
   methods: {
@@ -2544,40 +2546,60 @@ __webpack_require__.r(__webpack_exports__);
         $(".r2").hide();
         $(".r3").hide();
         $(".r4").hide();
+        $(".r5").hide();
         $(".t1").addClass("active");
         $(".t2").removeClass("active");
         $(".t3").removeClass("active");
         $(".t4").removeClass("active");
+        $(".t5").removeClass("active");
       });
       $(".t2").click(function () {
         $(".r1").hide();
         $(".r2").fadeIn(1000);
         $(".r3").hide();
         $(".r4").hide();
+        $(".r5").hide();
         $(".t1").removeClass("active");
         $(".t2").addClass("active");
         $(".t3").removeClass("active");
         $(".t4").removeClass("active");
+        $(".t5").removeClass("active");
       });
       $(".t3").click(function () {
         $(".r1").hide();
         $(".r2").hide();
         $(".r3").fadeIn(1000);
         $(".r4").hide();
+        $(".r5").hide();
         $(".t1").removeClass("active");
         $(".t2").removeClass("active");
         $(".t3").addClass("active");
         $(".t4").removeClass("active");
+        $(".t5").removeClass("active");
       });
       $(".t4").click(function () {
         $(".r1").hide();
         $(".r2").hide();
         $(".r3").hide();
-        $(".r4").show();
+        $(".r4").fadeIn(1000);
+        $(".r5").hide();
         $(".t1").removeClass("active");
         $(".t2").removeClass("active");
         $(".t3").removeClass("active");
         $(".t4").addClass("active");
+        $(".t5").removeClass("active");
+      });
+      $(".t5").click(function () {
+        $(".r1").hide();
+        $(".r2").hide();
+        $(".r3").hide();
+        $(".r4").hide();
+        $(".r5").show();
+        $(".t1").removeClass("active");
+        $(".t2").removeClass("active");
+        $(".t3").removeClass("active");
+        $(".t4").removeClass("active");
+        $(".t5").addClass("active");
       });
     }
   },
@@ -2718,6 +2740,524 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "TimezoneConverter",
+  data: function data() {
+    return {
+      error: false,
+      info: '',
+      timestamp: '',
+      response: false,
+      timezone: "GMT"
+    };
+  },
+  computed: {
+    stamp: function stamp() {
+      return this.timestamp = Math.floor(Date.now() / 1000);
+    }
+  },
+  methods: {
+    getDate: function getDate() {
+      var _this = this;
+
+      axios.post('api/timezone', {
+        timestamp: this.timestamp,
+        timezone: this.timezone
+      }).then(function (response) {
+        _this.info = response.data.data;
+        _this.response = true;
+        _this.error = false;
+      })["catch"](function (error) {
+        _this.error = true;
+      });
+      this.response = false;
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneList.vue?vue&type=script&lang=js&":
+/*!********************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Homepage/TimezoneList.vue?vue&type=script&lang=js& ***!
+  \********************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "TimezoneList"
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Preferences/PrefBody.vue?vue&type=script&lang=js&":
 /*!*******************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Preferences/PrefBody.vue?vue&type=script&lang=js& ***!
@@ -2754,6 +3294,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "PrefBody",
   methods: {
@@ -2763,40 +3307,60 @@ __webpack_require__.r(__webpack_exports__);
         $(".r2").hide();
         $(".r3").hide();
         $(".r4").hide();
+        $(".r5").hide();
         $(".t1").addClass("active");
         $(".t2").removeClass("active");
         $(".t3").removeClass("active");
         $(".t4").removeClass("active");
+        $(".t5").removeClass("active");
       });
       $(".t2").click(function () {
         $(".r1").hide();
         $(".r2").fadeIn(1000);
         $(".r3").hide();
         $(".r4").hide();
+        $(".r5").hide();
         $(".t1").removeClass("active");
         $(".t2").addClass("active");
         $(".t3").removeClass("active");
         $(".t4").removeClass("active");
+        $(".t5").removeClass("active");
       });
       $(".t3").click(function () {
         $(".r1").hide();
         $(".r2").hide();
         $(".r3").fadeIn(1000);
         $(".r4").hide();
+        $(".r5").hide();
         $(".t1").removeClass("active");
         $(".t2").removeClass("active");
         $(".t3").addClass("active");
         $(".t4").removeClass("active");
+        $(".t5").removeClass("active");
       });
       $(".t4").click(function () {
         $(".r1").hide();
         $(".r2").hide();
         $(".r3").hide();
-        $(".r4").show();
+        $(".r4").fadeIn(1000);
+        $(".r5").hide();
         $(".t1").removeClass("active");
         $(".t2").removeClass("active");
         $(".t3").removeClass("active");
         $(".t4").addClass("active");
+        $(".t5").removeClass("active");
+      });
+      $(".t5").click(function () {
+        $(".r1").hide();
+        $(".r2").hide();
+        $(".r3").hide();
+        $(".r4").hide();
+        $(".r5").show();
+        $(".t1").removeClass("active");
+        $(".t2").removeClass("active");
+        $(".t3").removeClass("active");
+        $(".t4").removeClass("active");
+        $(".t5").addClass("active");
       });
     }
   },
@@ -5726,8 +6290,8 @@ __webpack_require__.r(__webpack_exports__);
     for (var i = 0, len = elements.length; i < len; i++) {
       var _ret = _loop(i);
 
-        if (_ret === "continue")
-            }
+      if (_ret === "continue") continue;
+    }
 
     return createdDocument.body.innerHTML;
   }
@@ -7527,7 +8091,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\nbody[data-v-6c4f8f41] {\n    margin: 0;\n    font-family: \"Lato\", sans-serif;\n}\n.r2[data-v-6c4f8f41] {\n    display: none;\n}\n.r3[data-v-6c4f8f41] {\n    display: none;\n}\n.r4[data-v-6c4f8f41] {\n    display: none;\n}\n.sidebar[data-v-6c4f8f41] {\n    margin: 0;\n    padding: 0;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n    background-color: #f1f1f1;\n    height: -webkit-fit-content;\n    height: -moz-fit-content;\n    height: fit-content;\n    overflow: auto;\n}\n.sidebar a[data-v-6c4f8f41] {\n    display: block;\n    color: black;\n    padding: 16px;\n    text-decoration: none;\n}\n.sidebar a.active[data-v-6c4f8f41] {\n    background-color: black;\n    color: white;\n}\n.sidebar a[data-v-6c4f8f41]:hover:not(.active) {\n    background-color: #555;\n    color: white;\n}\ndiv.content[data-v-6c4f8f41] {\n    padding: 1px 16px;\n}\n@media screen and (max-width: 700px) {\n.sidebar[data-v-6c4f8f41] {\n        width: 100%;\n        height: auto;\n        position: relative;\n}\n.sidebar a[data-v-6c4f8f41] {\n        float: left;\n}\ndiv.content[data-v-6c4f8f41] {\n        margin-left: 0;\n}\n}\n@media screen and (max-width: 414px) {\n.sidebar a[data-v-6c4f8f41] {\n        text-align: center;\n        float: none;\n}\n}\n", ""]);
+exports.push([module.i, "\nbody[data-v-6c4f8f41] {\n    margin: 0;\n    font-family: \"Lato\", sans-serif;\n}\n.r2[data-v-6c4f8f41] {\n    display: none;\n}\n.r3[data-v-6c4f8f41] {\n    display: none;\n}\n.r4[data-v-6c4f8f41] {\n    display: none;\n}\n.r5[data-v-6c4f8f41] {\n    display: none;\n}\n.sidebar[data-v-6c4f8f41] {\n    margin: 0;\n    padding: 0;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n    background-color: #f1f1f1;\n    height: -webkit-fit-content;\n    height: -moz-fit-content;\n    height: fit-content;\n    overflow: auto;\n}\n.sidebar a[data-v-6c4f8f41] {\n    display: block;\n    color: black;\n    padding: 16px;\n    text-decoration: none;\n}\n.sidebar a.active[data-v-6c4f8f41] {\n    background-color: black;\n    color: white;\n}\n.sidebar a[data-v-6c4f8f41]:hover:not(.active) {\n    background-color: #555;\n    color: white;\n}\ndiv.content[data-v-6c4f8f41] {\n    padding: 1px 16px;\n}\n@media screen and (max-width: 700px) {\n.sidebar[data-v-6c4f8f41] {\n        width: 100%;\n        height: auto;\n        position: relative;\n}\n.sidebar a[data-v-6c4f8f41] {\n        float: left;\n}\ndiv.content[data-v-6c4f8f41] {\n        margin-left: 0;\n}\n}\n@media screen and (max-width: 414px) {\n.sidebar a[data-v-6c4f8f41] {\n        text-align: center;\n        float: none;\n}\n}\n", ""]);
 
 // exports
 
@@ -7572,6 +8136,44 @@ exports.push([module.i, "\nimg[data-v-51ef1594] {\n    display: inline;\n    hei
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=style&index=0&id=5c66e151&scoped=true&lang=css&":
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=style&index=0&id=5c66e151&scoped=true&lang=css& ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n#timestamp[data-v-5c66e151] {\n    height: 40px;\n    width: 115px;\n}\n#timezone[data-v-5c66e151] {\n    height: 40px;\n}\n#submit[data-v-5c66e151] {\n    width: 230px;\n    height: 40px;\n}\n.result-box[data-v-5c66e151] {\n    line-height: 12px;\n}\nh2[data-v-5c66e151] {\n    color: black;\n    font-weight: bold;\n    text-shadow: 2px 2px grey;\n}\n@media screen and (max-width: 414px) {\n.t-l[data-v-5c66e151] {\n        margin-left: 0px;\n}\n#timestamp[data-v-5c66e151] {\n        width: 100px;\n        height: 30px;\n}\n#timezone[data-v-5c66e151] {\n        margin-top: 10px;\n        height: 30px;\n}\n#submit[data-v-5c66e151] {\n        width: 185px;\n        height: 30px;\n}\n.result-box[data-v-5c66e151] {\n        font-size: x-small;\n}\nh2[data-v-5c66e151] {\n        font-size: x-large;\n}\n.t-c[data-v-5c66e151] {\n        font-size: small;\n}\n.result-box[data-v-5c66e151] {\n        line-height: 5px;\n}\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneList.vue?vue&type=style&index=0&id=66663906&scoped=true&lang=css&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Homepage/TimezoneList.vue?vue&type=style&index=0&id=66663906&scoped=true&lang=css& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.t-l[data-v-66663906] {\n    height: 40px;\n    width: 115px;\n}\n@media screen and  (max-width: 414px) {\n.t-l[data-v-66663906] {\n        height: 30px;\n        width: 100px;\n}\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Preferences/PrefBody.vue?vue&type=style&index=0&id=e5fc12b2&scoped=true&lang=css&":
 /*!**************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Preferences/PrefBody.vue?vue&type=style&index=0&id=e5fc12b2&scoped=true&lang=css& ***!
@@ -7584,7 +8186,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\nbody[data-v-e5fc12b2] {\n    margin: 0;\n    font-family: \"Lato\", sans-serif;\n}\n.r1[data-v-e5fc12b2] {\n    display: none;\n}\n.r2[data-v-e5fc12b2] {\n    display: none;\n}\n.r3[data-v-e5fc12b2] {\n    display: none;\n}\n.sidebar[data-v-e5fc12b2] {\n    margin: 0;\n    padding: 0;\n    background-color: #f1f1f1;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n    height: -webkit-fit-content;\n    height: -moz-fit-content;\n    height: fit-content;\n    overflow: auto;\n}\n.sidebar a[data-v-e5fc12b2] {\n    display: block;\n    color: black;\n    padding: 16px;\n    text-decoration: none;\n}\n.sidebar a.active[data-v-e5fc12b2] {\n    background-color: black;\n    color: white;\n}\n.sidebar a[data-v-e5fc12b2]:hover:not(.active) {\n    background-color: #555;\n    color: white;\n}\ndiv.content[data-v-e5fc12b2] {\n    padding: 1px 16px;\n}\n@media screen and (max-width: 700px) {\n.sidebar[data-v-e5fc12b2] {\n        width: 100%;\n        height: auto;\n        position: relative;\n}\n.sidebar a[data-v-e5fc12b2] {\n        float: left;\n}\ndiv.content[data-v-e5fc12b2] {\n        margin-left: 0;\n}\n}\n@media screen and (max-width: 414px) {\n.sidebar a[data-v-e5fc12b2] {\n        text-align: center;\n        float: none;\n}\n}\n", ""]);
+exports.push([module.i, "\nbody[data-v-e5fc12b2] {\n    margin: 0;\n    font-family: \"Lato\", sans-serif;\n}\n.r1[data-v-e5fc12b2] {\n    display: none;\n}\n.r2[data-v-e5fc12b2] {\n    display: none;\n}\n.r3[data-v-e5fc12b2] {\n    display: none;\n}\n.r4[data-v-e5fc12b2] {\n    display: none;\n}\n.sidebar[data-v-e5fc12b2] {\n    margin: 0;\n    padding: 0;\n    background-color: #f1f1f1;\n    width: -webkit-fit-content;\n    width: -moz-fit-content;\n    width: fit-content;\n    height: -webkit-fit-content;\n    height: -moz-fit-content;\n    height: fit-content;\n    overflow: auto;\n}\n.sidebar a[data-v-e5fc12b2] {\n    display: block;\n    color: black;\n    padding: 16px;\n    text-decoration: none;\n}\n.sidebar a.active[data-v-e5fc12b2] {\n    background-color: black;\n    color: white;\n}\n.sidebar a[data-v-e5fc12b2]:hover:not(.active) {\n    background-color: #555;\n    color: white;\n}\ndiv.content[data-v-e5fc12b2] {\n    padding: 1px 16px;\n}\n@media screen and (max-width: 700px) {\n.sidebar[data-v-e5fc12b2] {\n        width: 100%;\n        height: auto;\n        position: relative;\n}\n.sidebar a[data-v-e5fc12b2] {\n        float: left;\n}\ndiv.content[data-v-e5fc12b2] {\n        margin-left: 0;\n}\n}\n@media screen and (max-width: 414px) {\n.sidebar a[data-v-e5fc12b2] {\n        text-align: center;\n        float: none;\n}\n}\n", ""]);
 
 // exports
 
@@ -10732,7 +11334,7 @@ function nodeName( elem, name ) {
 
   return elem.nodeName && elem.nodeName.toLowerCase() === name.toLowerCase();
 
-}
+};
 var rsingleTag = ( /^<([a-z][^\/\0>:\x20\t\r\n\f]*)[\x20\t\r\n\f]*\/?>(?:<\/\1>|)$/i );
 
 
@@ -39069,6 +39671,66 @@ if(false) {}
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=style&index=0&id=5c66e151&scoped=true&lang=css&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=style&index=0&id=5c66e151&scoped=true&lang=css& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./TimezoneConverter.vue?vue&type=style&index=0&id=5c66e151&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=style&index=0&id=5c66e151&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneList.vue?vue&type=style&index=0&id=66663906&scoped=true&lang=css&":
+/*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Homepage/TimezoneList.vue?vue&type=style&index=0&id=66663906&scoped=true&lang=css& ***!
+  \*******************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./TimezoneList.vue?vue&type=style&index=0&id=66663906&scoped=true&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneList.vue?vue&type=style&index=0&id=66663906&scoped=true&lang=css&");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {}
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Preferences/PrefBody.vue?vue&type=style&index=0&id=e5fc12b2&scoped=true&lang=css&":
 /*!******************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader!./node_modules/css-loader??ref--6-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--6-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Preferences/PrefBody.vue?vue&type=style&index=0&id=e5fc12b2&scoped=true&lang=css& ***!
@@ -39391,8 +40053,8 @@ function addStyle (obj, options) {
 	// If a transform function was defined, run it on the css
 	if (options.transform && obj.css) {
 	    result = typeof options.transform === 'function'
-            ? options.transform(obj.css)
-            : options.transform.default(obj.css);
+		 ? options.transform(obj.css) 
+		 : options.transform.default(obj.css);
 
 	    if (result) {
 	    	// If transform returns a value, use that instead of the original css.
@@ -40361,43 +41023,43 @@ var staticRenderFns = [
       _c(
         "div",
         { staticClass: "mt-3 ml-3 mr-3 rounded border bg-transparent shadow" },
-          [
-              _c("h4", {staticClass: "mt-2 ml-2"}, [
-                  _c("b", [_vm._v("What is Unix Timestamp?")])
-              ]),
-              _vm._v(" "),
-              _c("p", {staticClass: "ml-2"}, [
-                  _vm._v(
-                      "Unix timestamp is a system for describing a point in time. It is the number of seconds that\n            have elapsed\n            since the Unix epoch,\n            the Unix epoch is "
-                  ),
-                  _c("b", [_vm._v("00:00:00 UTC on 1 January 1970")]),
-                  _vm._v(
-                      " (an arbitrary date). A Unix timestamp is\n            interpreted the same regardless of\n            region and is calculated from the same point in time regardless of the time zone. If you have a web\n            application that is used\n            over multiple timezones and you need date/time to reflect individual users' settings, use a unix\n            timestamp.\n        "
-                  )
-              ]),
-              _c("br"),
-              _vm._v(" "),
-              _c("h4", {staticClass: "ml-2"}, [
-                  _c("b", [_vm._v("What is the limit of Unix Timestamp?")])
-              ]),
-              _vm._v(" "),
-              _c("p", {staticClass: "ml-2"}, [
-                  _vm._v(
-                      'Unix Time is represented by a 32 bit whole number (an integer) that can be positive or\n            negative (signed).\n            Unix was originally developed in the 60s and 70s so the "start" of Unix Time was set to January 1st 1970\n            at midnight GMT (Greenwich Mean Time) - this date/time was assigned the Unix Time value of 0.\n            This is what is known as the Unix Epoch.'
-                  )
-              ]),
-              _vm._v(" "),
-              _c("p", {staticClass: "ml-2"}, [
-                  _vm._v(
-                      "\n            A 32 bit signed integer can represent whole numbers between -2147483648 and 2147483647. Since Unix Time\n            starts at 0, negative Unix Time values go back in time from the Epoch and positive numbers go forward in\n            time. This means that Unix Time spans from Unix Time value of -2147483648 or 20:45:52 GMT on December\n            13th\n            1901 to Unix Time value of 2147483647 or 3:14:07 GMT on January 19 in 2038. These dates represent the\n            beginning,\n            the pre-history and the end of Unix Time.\n        "
-                  )
-              ]),
+        [
+          _c("h4", { staticClass: "mt-2 ml-2" }, [
+            _c("b", [_vm._v("What is Unix Timestamp?")])
+          ]),
           _vm._v(" "),
-              _c("p", {staticClass: "ml-2"}, [
-                  _vm._v(
-                      '\n            The end of Unix Time will occur on January 19, 2038 03:14:07 GMT. On January 19, 2038 03:14:08 GMT all\n            computers that still use 32 bit Unix Time will overflow. This is known as the "Year 2038 problem". Some\n            believe this will be a more significant problem than the "Year 2000 problem". The fix for the Year 2038\n            problem is to store Unix Time in a 64 bit integer. This is already underway in most 64 bit Operating\n            Systems\n            but many systems may not be updated by 2038.\n        '
-                  )
-              ])
+          _c("p", { staticClass: "ml-2" }, [
+            _vm._v(
+              "Unix timestamp is a system for describing a point in time. It is the number of seconds that\n            have elapsed\n            since the Unix epoch,\n            the Unix epoch is "
+            ),
+            _c("b", [_vm._v("00:00:00 UTC on 1 January 1970")]),
+            _vm._v(
+              " (an arbitrary date). A Unix timestamp is\n            interpreted the same regardless of\n            region and is calculated from the same point in time regardless of the time zone. If you have a web\n            application that is used\n            over multiple timezones and you need date/time to reflect individual users' settings, use a unix\n            timestamp.\n        "
+            )
+          ]),
+          _c("br"),
+          _vm._v(" "),
+          _c("h4", { staticClass: "ml-2" }, [
+            _c("b", [_vm._v("What is the limit of Unix Timestamp?")])
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "ml-2" }, [
+            _vm._v(
+              'Unix Time is represented by a 32 bit whole number (an integer) that can be positive or\n            negative (signed).\n            Unix was originally developed in the 60s and 70s so the "start" of Unix Time was set to January 1st 1970\n            at midnight GMT (Greenwich Mean Time) - this date/time was assigned the Unix Time value of 0.\n            This is what is known as the Unix Epoch.'
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "ml-2" }, [
+            _vm._v(
+              "\n            A 32 bit signed integer can represent whole numbers between -2147483648 and 2147483647. Since Unix Time\n            starts at 0, negative Unix Time values go back in time from the Epoch and positive numbers go forward in\n            time. This means that Unix Time spans from Unix Time value of -2147483648 or 20:45:52 GMT on December\n            13th\n            1901 to Unix Time value of 2147483647 or 3:14:07 GMT on January 19 in 2038. These dates represent the\n            beginning,\n            the pre-history and the end of Unix Time.\n        "
+            )
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "ml-2" }, [
+            _vm._v(
+              '\n            The end of Unix Time will occur on January 19, 2038 03:14:07 GMT. On January 19, 2038 03:14:08 GMT all\n            computers that still use 32 bit Unix Time will overflow. This is known as the "Year 2038 problem". Some\n            believe this will be a more significant problem than the "Year 2000 problem". The fix for the Year 2038\n            problem is to store Unix Time in a 64 bit integer. This is already underway in most 64 bit Operating\n            Systems\n            but many systems may not be updated by 2038.\n        '
+            )
+          ])
         ]
       ),
       _vm._v(" "),
@@ -40459,48 +41121,42 @@ render._withStripped = true
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony export (binding) */
-            __webpack_require__.d(__webpack_exports__, "render", function () {
-                return render;
-            });
-            /* harmony export (binding) */
-            __webpack_require__.d(__webpack_exports__, "staticRenderFns", function () {
-                return staticRenderFns;
-            });
-            var render = function () {
-                var _vm = this
-                var _h = _vm.$createElement
-                var _c = _vm._self._c || _h
-                return _c(
-                    "div",
-                    {staticClass: "mt-3 ml-4 mr-4 mb-2 border rounded shadow-sm"},
-                    [
-                        _c("p", {staticClass: "mt-3 ml-2 mr-1 mb-2"}, [
-                            _vm._v("Current Unix Timestamp:\n        "),
-                            _c(
-                                "span",
-                                {
-                                    staticClass: "font-weight-bold",
-                                    staticStyle: {"text-shadow": "1px 1px grey"}
-                                },
-                                [
-                                    _c("label", {attrs: {id: "time"}}, [
-                                        _vm._v(_vm._s(_vm.timestamp))
-                                    ])
-                                ]
-                            )
-                        ])
-                    ]
-                )
-            }
-            var staticRenderFns = []
-            render._withStripped = true
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "mt-3 ml-4 mr-4 mb-2 border rounded shadow-sm" },
+    [
+      _c("p", { staticClass: "mt-3 ml-2 mr-1 mb-2" }, [
+        _vm._v("Current Unix Timestamp:\n        "),
+        _c(
+          "span",
+          {
+            staticClass: "font-weight-bold",
+            staticStyle: { "text-shadow": "1px 1px grey" }
+          },
+          [
+            _c("label", { attrs: { id: "time" } }, [
+              _vm._v(_vm._s(_vm.timestamp))
+            ])
+          ]
+        )
+      ])
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
 
 
-            /***/
-        }),
+
+/***/ }),
 
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/HumanDateToEpoch.vue?vue&type=template&id=2028da19&scoped=true&":
 /*!****************************************************************************************************************************************************************************************************************************************!*\
@@ -40642,17 +41298,19 @@ var render = function() {
     _c(
       "div",
       { staticClass: "col-sm-8 content ml-1 mr-1" },
-        [
-            _c("date-to-epoch", {staticClass: "r1"}),
-            _vm._v(" "),
-            _c("human-date-to-epoch", {staticClass: "r1"}),
-            _vm._v(" "),
-            _c("epoch-to-human", {staticClass: "r2"}),
-            _vm._v(" "),
-            _c("begin-end", {staticClass: "r3"}),
-            _vm._v(" "),
-            _c("pref-form", {staticClass: "r4"})
-        ],
+      [
+        _c("date-to-epoch", { staticClass: "r1" }),
+        _vm._v(" "),
+        _c("human-date-to-epoch", { staticClass: "r1" }),
+        _vm._v(" "),
+        _c("epoch-to-human", { staticClass: "r2" }),
+        _vm._v(" "),
+        _c("begin-end", { staticClass: "r3" }),
+        _vm._v(" "),
+        _c("tz-converter", { staticClass: "r4" }),
+        _vm._v(" "),
+        _c("pref-form", { staticClass: "r5" })
+      ],
       1
     )
   ])
@@ -40668,13 +41326,13 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "shadow-sm rounded" }, [
           _c("a", { staticClass: "active t1", attrs: { href: "/" } }, [
-              _vm._v(" Date to Timestamp Converter")
+            _vm._v(" Date to Timestamp Converter")
           ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "shadow-sm rounded" }, [
           _c("a", { staticClass: "t2" }, [
-              _vm._v("Timestamp to Date Converter")
+            _vm._v("Timestamp to Date Converter")
           ])
         ]),
         _vm._v(" "),
@@ -40683,7 +41341,11 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "shadow-sm rounded" }, [
-          _c("a", { staticClass: "t4", attrs: { href: "/preferences" } }, [
+          _c("a", { staticClass: "t4" }, [_vm._v("Timezone Converter")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "shadow-sm rounded" }, [
+          _c("a", { staticClass: "t5", attrs: { href: "/preferences" } }, [
             _vm._v("Preferences")
           ])
         ])
@@ -41038,6 +41700,2820 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=template&id=5c66e151&scoped=true&":
+/*!*****************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=template&id=5c66e151&scoped=true& ***!
+  \*****************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", { staticClass: "mt-1" }, [
+    _c("h2", [_vm._v("Convert Unix Timestamp to other Timezone")]),
+    _vm._v(" "),
+    _c(
+      "form",
+      {
+        on: {
+          submit: function($event) {
+            $event.preventDefault()
+            return _vm.getDate($event)
+          }
+        }
+      },
+      [
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.timestamp,
+              expression: "timestamp"
+            }
+          ],
+          staticClass: "shadow-sm t-c rounded-lg",
+          attrs: {
+            placeholder: _vm.stamp,
+            id: "timestamp",
+            required: "",
+            size: "12"
+          },
+          domProps: { value: _vm.timestamp },
+          on: {
+            input: function($event) {
+              if ($event.target.composing) {
+                return
+              }
+              _vm.timestamp = $event.target.value
+            }
+          }
+        }),
+        _vm._v(" "),
+        _c(
+          "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.timezone,
+                expression: "timezone"
+              }
+            ],
+            staticClass: "t-l shadow-sm rounded",
+            attrs: { id: "timezone" },
+            on: {
+              change: function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.timezone = $event.target.multiple
+                  ? $$selectedVal
+                  : $$selectedVal[0]
+              }
+            }
+          },
+          [
+            _c("option", { staticClass: "t-c", attrs: { value: "GMT" } }, [
+              _vm._v("GMT")
+            ]),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Abidjan" } },
+              [_vm._v("Africa/Abidjan")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Accra" } },
+              [_vm._v("Africa/Accra")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Addis_Ababa" } },
+              [_vm._v("Africa/Addis Ababa")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Algiers" } },
+              [_vm._v("Africa/Algiers")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Asmara" } },
+              [_vm._v("Africa/Asmara")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Bamako" } },
+              [_vm._v("Africa/Bamako")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Bangui" } },
+              [_vm._v("Africa/Bangui")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Banjul" } },
+              [_vm._v("Africa/Banjul")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Bissau" } },
+              [_vm._v("Africa/Bissau")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Blantyre" } },
+              [_vm._v("Africa/Blantyre")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Brazzaville" } },
+              [_vm._v("Africa/Brazzaville")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Bujumbura" } },
+              [_vm._v("Africa/Bujumbura")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Cairo" } },
+              [_vm._v("Africa/Cairo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Casablanca" } },
+              [_vm._v("Africa/Casablanca")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Ceuta" } },
+              [_vm._v("Africa/Ceuta")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Conakry" } },
+              [_vm._v("Africa/Conakry")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Dakar" } },
+              [_vm._v("Africa/Dakar")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Dar_es_Salaam" } },
+              [_vm._v("Africa/Dar-es-Salaam")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Djibouti" } },
+              [_vm._v("Africa/Djibouti")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Douala" } },
+              [_vm._v("Africa/Douala")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/El_Aaiun" } },
+              [_vm._v("Africa/El-Aaiun")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Freetown" } },
+              [_vm._v("Africa/Freetown")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Gaborone" } },
+              [_vm._v("Africa/Gaborone")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Harare" } },
+              [_vm._v("Africa/Harare")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Johannesburg" } },
+              [_vm._v("Africa/Johannesburg")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Juba" } },
+              [_vm._v("Africa/Juba")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Kampala" } },
+              [_vm._v("Africa/Kampala")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Khartoum" } },
+              [_vm._v("Africa/Khartoum")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Kigali" } },
+              [_vm._v("Africa/Kigali")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Kinshasa" } },
+              [_vm._v("Africa/Kinshasa")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Lagos" } },
+              [_vm._v("Africa/Lagos")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Libreville" } },
+              [_vm._v("Africa/Libreville")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Lome" } },
+              [_vm._v("Africa/Lome")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Luanda" } },
+              [_vm._v("Africa/Luanda")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Lubumbashi" } },
+              [_vm._v("Africa/Lubumbashi")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Lusaka" } },
+              [_vm._v("Africa/Lusaka")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Malabo" } },
+              [_vm._v("Africa/Malabo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Maputo" } },
+              [_vm._v("Africa/Maputo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Maseru" } },
+              [_vm._v("Africa/Maseru")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { attrs: { classWallis: "t-c", value: "Africa/Mbabane" } },
+              [_vm._v("Africa/Mbabane")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Mogadishu" } },
+              [_vm._v("Africa/Mogadishu")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Monrovia" } },
+              [_vm._v("Africa/Monrovia")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Nairobi" } },
+              [_vm._v("Africa/Nairobi")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Ndjamena" } },
+              [_vm._v("Africa/Ndjamena")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Niamey" } },
+              [_vm._v("Africa/Niamey")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Nouakchott" } },
+              [_vm._v("Africa/Nouakchott")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Ouagadougou" } },
+              [_vm._v("Africa/Ouagadougou")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Porto-Novo" } },
+              [_vm._v("Africa/Porto-Novo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Sao_Tome" } },
+              [_vm._v("Africa/Sao-Tome")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Tripoli" } },
+              [_vm._v("Africa/Tripoli")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Tunis" } },
+              [_vm._v("Africa/Tunis")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Africa/Windhoek" } },
+              [_vm._v("Africa/Windhoek")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Adak" } },
+              [_vm._v("America/Adak")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Anchorage" } },
+              [_vm._v("America/Anchorage")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Anguilla" } },
+              [_vm._v("America/Anguilla")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Antigua" } },
+              [_vm._v("America/Antigua")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Araguaina" } },
+              [_vm._v("America/Araguaina")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Argentina/Buenos_Aires" }
+              },
+              [_vm._v("America/Argentina/Buenos Aires/")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Argentina/Catamarca" }
+              },
+              [_vm._v("America/Argentina/Catamarca")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Argentina/Cordoba" }
+              },
+              [_vm._v("America/Argentina/Cordoba")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Argentina/Jujuy" }
+              },
+              [_vm._v("America/Argentina/Jujuy")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Argentina/La_Rioja" }
+              },
+              [_vm._v("America/Argentina/La Rioja")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Argentina/Mendoza" }
+              },
+              [_vm._v("America/Argentina/Mendoza")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Argentina/Rio_Gallegos" }
+              },
+              [_vm._v("America/Argentina/Rio Gallegos")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Argentina/Salta" }
+              },
+              [_vm._v("America/Argentina/Salta")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Argentina/San_Juan" }
+              },
+              [_vm._v("America/Argentina/San Juan")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Argentina/San_Luis" }
+              },
+              [_vm._v("America/Argentina/San Luis")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Argentina/Tucuman" }
+              },
+              [_vm._v("America/Argentina/Tucuman")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Argentina/Ushuaia" }
+              },
+              [_vm._v("America/Argentina/Ushuaia")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Aruba" } },
+              [_vm._v("America/Aruba")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Asuncion" } },
+              [_vm._v("America/Asuncion")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Atikokan" } },
+              [_vm._v("America/Atikokan")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Bahia" } },
+              [_vm._v("America/Bahia")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Bahia_Banderas" }
+              },
+              [_vm._v("America/Bahia Banderas")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Barbados" } },
+              [_vm._v("America/Barbados")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Belem" } },
+              [_vm._v("America/Belem")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Belize" } },
+              [_vm._v("America/Belize")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Blanc-Sablon" } },
+              [_vm._v("America/Blanc-Sablon")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Boa_Vista" } },
+              [_vm._v("America/Boa Vista")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Bogota" } },
+              [_vm._v("America/Bogota")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Boise" } },
+              [_vm._v("America/Boise")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Cambridge_Bay" } },
+              [_vm._v("America/Cambridge Bay")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Campo_Grande" } },
+              [_vm._v("America/Campo Grande")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Cancun" } },
+              [_vm._v("America/Cancun")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Caracas" } },
+              [_vm._v("America/Caracas")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Cayenne" } },
+              [_vm._v("America/Cayenne")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Cayman" } },
+              [_vm._v("America/Cayman")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Chicago" } },
+              [_vm._v("America/Chicago")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Chihuahua" } },
+              [_vm._v("America/Chihuahua")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Costa_Rica" } },
+              [_vm._v("America/Costa Rica")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Creston" } },
+              [_vm._v("America/Creston")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Cuiaba" } },
+              [_vm._v("America/Cuiaba")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Curacao" } },
+              [_vm._v("America/Curacao")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Danmarkshavn" } },
+              [_vm._v("America/Danmarkshavn")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Dawson" } },
+              [_vm._v("America/Dawson")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Dawson_Creek" } },
+              [_vm._v("America/Dawson Creek")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Denver" } },
+              [_vm._v("America/Denver")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Detroit" } },
+              [_vm._v("America/Detroit")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Dominica" } },
+              [_vm._v("America/Dominica")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Edmonton" } },
+              [_vm._v("America/Edmonton")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Eirunepe" } },
+              [_vm._v("America/Eirunepe")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/El_Salvador" } },
+              [_vm._v("America/El Salvador")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Fort_Nelson" } },
+              [_vm._v("America/Fort Nelson")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Fortaleza" } },
+              [_vm._v("America/Fortaleza")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Glace_Bay" } },
+              [_vm._v("America/Glace Bay")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Goose_Bay" } },
+              [_vm._v("America/Goose Bay")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Grand_Turk" } },
+              [_vm._v("America/Grand Turk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Grenada" } },
+              [_vm._v("America/Grenada")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Guadeloupe" } },
+              [_vm._v("America/Guadeloupe")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Guatemala" } },
+              [_vm._v("America/Guatemala")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Guayaquil" } },
+              [_vm._v("America/Guayaquil")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Guyana" } },
+              [_vm._v("America/Guyana")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Halifax" } },
+              [_vm._v("America/Halifax")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Havana" } },
+              [_vm._v("America/Havana")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Hermosillo" } },
+              [_vm._v("America/Hermosillo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Indiana/Indianapolis" }
+              },
+              [_vm._v("America/Indiana/Indianapolis")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Indiana/Knox" } },
+              [_vm._v("America/Indiana/Knox")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Indiana/Marengo" }
+              },
+              [_vm._v("America/Indiana/Marengo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Indiana/Petersburg" }
+              },
+              [_vm._v("America/Indiana/Petersburg")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Indiana/Tell_City" }
+              },
+              [_vm._v("America/Indiana/Tell City")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Indiana/Vevay" } },
+              [_vm._v("America/Indiana/Vevay")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Indiana/Vincennes" }
+              },
+              [_vm._v("America/Indiana/Vincennes")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Indiana/Winamac" }
+              },
+              [_vm._v("America/Indiana/Winamac")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Inuvik" } },
+              [_vm._v("America/Inuvik")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Iqaluit" } },
+              [_vm._v("America/Iqaluit")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Jamaica" } },
+              [_vm._v("America/Jamaica")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Juneau" } },
+              [_vm._v("America/Juneau")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Kentucky/Louisville" }
+              },
+              [_vm._v("America/Kentucky/Louisville")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Kentucky/Monticello" }
+              },
+              [_vm._v("America/Kentucky/Monticello")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Kralendijk" } },
+              [_vm._v("America/Kralendijk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/La_Paz" } },
+              [_vm._v("America/La Paz")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Lima" } },
+              [_vm._v("America/Lima")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Los_Angeles" } },
+              [_vm._v("America/Los Angeles")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Lower_Princes" } },
+              [_vm._v("America/Lower Princes")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Maceio" } },
+              [_vm._v("America/Maceio")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Managua" } },
+              [_vm._v("America/Managua")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Manaus" } },
+              [_vm._v("America/Manaus")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Marigot" } },
+              [_vm._v("America/Marigot")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Martinique" } },
+              [_vm._v("America/Martinique")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Matamoros" } },
+              [_vm._v("America/Matamoros")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Mazatlan" } },
+              [_vm._v("America/Mazatlan")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Menominee" } },
+              [_vm._v("America/Menominee")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Merida" } },
+              [_vm._v("America/Merida")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Metlakatla" } },
+              [_vm._v("America/Metlakatla")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Mexico_City" } },
+              [_vm._v("America/Mexico City")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Miquelon" } },
+              [_vm._v("America/Miquelon")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Moncton" } },
+              [_vm._v("America/Moncton")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Monterrey" } },
+              [_vm._v("America/Monterrey")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Montevideo" } },
+              [_vm._v("America/Montevideo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Montserrat" } },
+              [_vm._v("America/Montserrat")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Nassau" } },
+              [_vm._v("America/Nassau")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/New_York" } },
+              [_vm._v("America/New York")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Nipigon" } },
+              [_vm._v("America/Nipigon")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Nome" } },
+              [_vm._v("America/Nome")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Noronha" } },
+              [_vm._v("America/Noronha")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/North_Dakota/Beulah" }
+              },
+              [_vm._v("America/North Dakota/Beulah")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/North_Dakota/Center" }
+              },
+              [_vm._v("America/North Dakota/Center")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/North_Dakota/New_Salem" }
+              },
+              [_vm._v("America/North Dakota/New Salem")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Nuuk" } },
+              [_vm._v("America/Nuuk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Ojinaga" } },
+              [_vm._v("America/Ojinaga")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Panama" } },
+              [_vm._v("America/Panama")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Pangnirtung" } },
+              [_vm._v("America/Pangnirtung")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Paramaribo" } },
+              [_vm._v("America/Paramaribo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Phoenix" } },
+              [_vm._v("America/Phoenix")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "America/Port-au-Prince" }
+              },
+              [_vm._v("America/Port-au-Prince")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Port_of_Spain" } },
+              [_vm._v("America/Port of Spain")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Porto_Velho" } },
+              [_vm._v("America/Porto Velho")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Puerto_Rico" } },
+              [_vm._v("America/Puerto Rico")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Punta_Arenas" } },
+              [_vm._v("America/Punta Arenas")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Rainy_River" } },
+              [_vm._v("America/Rainy River")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Rankin_Inlet" } },
+              [_vm._v("America/Rankin Inlet")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Recife" } },
+              [_vm._v("America/Recife")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Regina" } },
+              [_vm._v("America/Regina")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Resolute" } },
+              [_vm._v("America/Resolute")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Rio_Branco" } },
+              [_vm._v("America/Rio Branco")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Santarem" } },
+              [_vm._v("America/Santarem")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Santiago" } },
+              [_vm._v("America/Santiago")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Santo_Domingo" } },
+              [_vm._v("America/Santo Domingo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Sao_Paulo" } },
+              [_vm._v("America/Sao Paulo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Scoresbysund" } },
+              [_vm._v("America/Scoresbysund")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Sitka" } },
+              [_vm._v("America/Sitka")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/St_Barthelemy" } },
+              [_vm._v("America/St Barthelemy")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/St_Johns" } },
+              [_vm._v("America/St Johns")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/St_Kitts" } },
+              [_vm._v("America/St Kitts")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/St_Lucia" } },
+              [_vm._v("America/St Lucia")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/St_Thomas" } },
+              [_vm._v("America/St Thomas")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/St_Vincent" } },
+              [_vm._v("America/St Vincent")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Swift_Current" } },
+              [_vm._v("America/Swift Current")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Tegucigalpa" } },
+              [_vm._v("America/Tegucigalpa")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Thule" } },
+              [_vm._v("America/Thule")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Thunder_Bay" } },
+              [_vm._v("America/Thunder Bay")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Tijuana" } },
+              [_vm._v("America/Tijuana")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Toronto" } },
+              [_vm._v("America/Toronto")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Tortola" } },
+              [_vm._v("America/Tortola")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Vancouver" } },
+              [_vm._v("America/Vancouver")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Whitehorse" } },
+              [_vm._v("America/Whitehorse")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Winnipeg" } },
+              [_vm._v("America/Winnipeg")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Yakutat" } },
+              [_vm._v("America/Yakutat")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "America/Yellowknife" } },
+              [_vm._v("America/Yellowknife")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Antarctica/Casey" } },
+              [_vm._v("Antarctica/Casey")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Antarctica/Davis" } },
+              [_vm._v("Antarctica/Davis")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "Antarctica/DumontDUrville" }
+              },
+              [_vm._v("Antarctica/DumontDUrville")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Antarctica/Macquarie" } },
+              [_vm._v("Antarctica/Macquarie")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Antarctica/Mawson" } },
+              [_vm._v("Antarctica/Mawson")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Antarctica/McMurdo" } },
+              [_vm._v("Antarctica/McMurdo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Antarctica/Palmer" } },
+              [_vm._v("Antarctica/Palmer")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Antarctica/Rothera" } },
+              [_vm._v("Antarctica/Rothera")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Antarctica/Syowa" } },
+              [_vm._v("Antarctica/Syowa")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Antarctica/Troll" } },
+              [_vm._v("Antarctica/Troll")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Antarctica/Vostok" } },
+              [_vm._v("Antarctica/Vostok")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Arctic/Longyearbyen" } },
+              [_vm._v("Arctic/Longyearbyen")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Aden" } },
+              [_vm._v("Asia/Aden")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Almaty" } },
+              [_vm._v("Asia/Almaty")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Amman" } },
+              [_vm._v("Asia/Amman")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Anadyr" } },
+              [_vm._v("Asia/Anadyr")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Aqtau" } },
+              [_vm._v("Asia/Aqtau")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Aqtobe" } },
+              [_vm._v("Asia/Aqtobe")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Ashgabat" } },
+              [_vm._v("Asia/Ashgabat")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Atyrau" } },
+              [_vm._v("Asia/Atyrau")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Baghdad" } },
+              [_vm._v("Asia/Baghdad")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Bahrain" } },
+              [_vm._v("Asia/Bahrain")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Baku" } },
+              [_vm._v("Asia/Baku")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Bangkok" } },
+              [_vm._v("Asia/Bangkok")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Barnaul" } },
+              [_vm._v("Asia/Barnaul")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Beirut" } },
+              [_vm._v("Asia/Beirut")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Bishkek" } },
+              [_vm._v("Asia/Bishkek")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Brunei" } },
+              [_vm._v("Asia/Brunei")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Chita" } },
+              [_vm._v("Asia/Chita")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Choibalsan" } },
+              [_vm._v("Asia/Choibalsan")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Colombo" } },
+              [_vm._v("Asia/Colombo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Damascus" } },
+              [_vm._v("Asia/Damascus")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Dhaka" } },
+              [_vm._v("Asia/Dhaka")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Dili" } },
+              [_vm._v("Asia/Dili")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Dubai" } },
+              [_vm._v("Asia/Dubai")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Dushanbe" } },
+              [_vm._v("Asia/Dushanbe")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Famagusta" } },
+              [_vm._v("Asia/Famagusta")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Gaza" } },
+              [_vm._v("Asia/Gaza")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Hebron" } },
+              [_vm._v("Asia/Hebron")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Ho_Chi_Minh" } },
+              [_vm._v("Asia/Ho Chi Minh")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Hong_Kong" } },
+              [_vm._v("Asia/Hong Kong")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Hovd" } },
+              [_vm._v("Asia/Hovd")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Irkutsk" } },
+              [_vm._v("Asia/Irkutsk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Jakarta" } },
+              [_vm._v("Asia/Jakarta")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Jayapura" } },
+              [_vm._v("Asia/Jayapura")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Jerusalem" } },
+              [_vm._v("Asia/Jerusalem")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Kabul" } },
+              [_vm._v("Asia/Kabul")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Kamchatka" } },
+              [_vm._v("Asia/Kamchatka")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Karachi" } },
+              [_vm._v("Asia/Karachi")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Kathmandu" } },
+              [_vm._v("Asia/Kathmandu")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Khandyga" } },
+              [_vm._v("Asia/Khandyga")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Kolkata" } },
+              [_vm._v("Asia/Kolkata")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Krasnoyarsk" } },
+              [_vm._v("Asia/Krasnoyarsk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Kuala_Lumpur" } },
+              [_vm._v("Asia/Kuala Lumpur")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Kuching" } },
+              [_vm._v("Asia/Kuching")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Kuwait" } },
+              [_vm._v("Asia/Kuwait")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Macau" } },
+              [_vm._v("Asia/Macau")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Magadan" } },
+              [_vm._v("Asia/Magadan")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Makassar" } },
+              [_vm._v("Asia/Makassar")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Manila" } },
+              [_vm._v("Asia/Manila")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Muscat" } },
+              [_vm._v("Asia/Muscat")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Nicosia" } },
+              [_vm._v("Asia/Nicosia")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Novokuznetsk" } },
+              [_vm._v("Asia/Novokuznetsk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Novosibirsk" } },
+              [_vm._v("Asia/Novosibirsk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Omsk" } },
+              [_vm._v("Asia/Omsk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Oral" } },
+              [_vm._v("Asia/Oral")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Phnom_Penh" } },
+              [_vm._v("Asia/Phnom Penh")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Pontianak" } },
+              [_vm._v("Asia/Pontianak")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Pyongyang" } },
+              [_vm._v("Asia/Pyongyang")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Qatar" } },
+              [_vm._v("Asia/Qatar")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Qostanay" } },
+              [_vm._v("Asia/Qostanay")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Qyzylorda" } },
+              [_vm._v("Asia/Qyzylorda")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Riyadh" } },
+              [_vm._v("Asia/Riyadh")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Sakhalin" } },
+              [_vm._v("Asia/Sakhalin")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Samarkand" } },
+              [_vm._v("Asia/Samarkand")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Seoul" } },
+              [_vm._v("Asia/Seoul")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Shanghai" } },
+              [_vm._v("Asia/Shanghai")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Singapore" } },
+              [_vm._v("Asia/Singapore")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Srednekolymsk" } },
+              [_vm._v("Asia/Srednekolymsk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Taipei" } },
+              [_vm._v("Asia/Taipei")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Tashkent" } },
+              [_vm._v("Asia/Tashkent")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Tbilisi" } },
+              [_vm._v("Asia/Tbilisi")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Tehran" } },
+              [_vm._v("Asia/Tehran")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Thimphu" } },
+              [_vm._v("Asia/Thimphu")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Tokyo" } },
+              [_vm._v("Asia/Tokyo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Tomsk" } },
+              [_vm._v("Asia/Tomsk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Ulaanbaatar" } },
+              [_vm._v("Asia/Ulaanbaatar")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Urumqi" } },
+              [_vm._v("Asia/Urumqi")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Ust-Nera" } },
+              [_vm._v("Asia/Ust-Nera")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Vientiane" } },
+              [_vm._v("Asia/Vientiane")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Vladivostok" } },
+              [_vm._v("Asia/Vladivostok")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Yakutsk" } },
+              [_vm._v("Asia/Yakutsk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Yangon" } },
+              [_vm._v("Asia/Yangon")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Yekaterinburg" } },
+              [_vm._v("Asia/Yekaterinburg")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Asia/Yerevan" } },
+              [_vm._v("Asia/Yerevan")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Atlantic/Azores" } },
+              [_vm._v("Atlantic/Azores")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Atlantic/Bermuda" } },
+              [_vm._v("Atlantic/Bermuda")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Atlantic/Canary" } },
+              [_vm._v("Atlantic/Canary")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Atlantic/Cape_Verde" } },
+              [_vm._v("Atlantic/Cape Verde")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Atlantic/Faroe" } },
+              [_vm._v("Atlantic/Faroe")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Atlantic/Madeira" } },
+              [_vm._v("Atlantic/Madeira")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Atlantic/Reykjavik" } },
+              [_vm._v("Atlantic/Reykjavik")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              {
+                staticClass: "t-c",
+                attrs: { value: "Atlantic/South_Georgia" }
+              },
+              [_vm._v("Atlantic/South Georgia")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Atlantic/St_Helena" } },
+              [_vm._v("Atlantic/St Helena")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Atlantic/Stanley" } },
+              [_vm._v("Atlantic/Stanley")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Australia/Adelaide" } },
+              [_vm._v("Australia/Adelaide")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Australia/Brisbane" } },
+              [_vm._v("Australia/Brisbane")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Australia/Broken_Hill" } },
+              [_vm._v("Australia/Broken Hill")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Australia/Currie" } },
+              [_vm._v("Australia/Currie")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Australia/Darwin" } },
+              [_vm._v("Australia/Darwin")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Australia/Eucla" } },
+              [_vm._v("Australia/Eucla")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Australia/Hobart" } },
+              [_vm._v("Australia/Hobart")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Australia/Lindeman" } },
+              [_vm._v("Australia/Lindeman")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Australia/Lord_Howe" } },
+              [_vm._v("Australia/Lord Howe")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Australia/Melbourne" } },
+              [_vm._v("Australia/Melbourne")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Australia/Perth" } },
+              [_vm._v("Australia/Perth")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Australia/Sydney" } },
+              [_vm._v("Australia/Sydney")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Amsterdam" } },
+              [_vm._v("Europe/Amsterdam")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Andorra" } },
+              [_vm._v("Europe/Andorra")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Astrakhan" } },
+              [_vm._v("Europe/Astrakhan")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Athens" } },
+              [_vm._v("Europe/Athens")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Belgrade" } },
+              [_vm._v("Europe/Belgrade")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Berlin" } },
+              [_vm._v("Europe/Berlin")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Bratislava" } },
+              [_vm._v("Europe/Bratislava")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Brussels" } },
+              [_vm._v("Europe/Brussels")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Bucharest" } },
+              [_vm._v("Europe/Bucharest")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Budapest" } },
+              [_vm._v("Europe/Budapest")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Busingen" } },
+              [_vm._v("Europe/Busingen")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Chisinau" } },
+              [_vm._v("Europe/Chisinau")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Copenhagen" } },
+              [_vm._v("Europe/Copenhagen")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Dublin" } },
+              [_vm._v("Europe/Dublin")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Gibraltar" } },
+              [_vm._v("Europe/Gibraltar")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Guernsey" } },
+              [_vm._v("Europe/Guernsey")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Helsinki" } },
+              [_vm._v("Europe/Helsinki")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Isle_of_Man" } },
+              [_vm._v("Europe/Isle of Man")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Istanbul" } },
+              [_vm._v("Europe/Istanbul")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Jersey" } },
+              [_vm._v("Europe/Jersey")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Kaliningrad" } },
+              [_vm._v("Europe/Kaliningrad")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Kiev" } },
+              [_vm._v("Europe/Kiev")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Kirov" } },
+              [_vm._v("Europe/Kirov")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Lisbon" } },
+              [_vm._v("Europe/Lisbon")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Ljubljana" } },
+              [_vm._v("Europe/Ljubljana")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/London" } },
+              [_vm._v("Europe/London")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Luxembourg" } },
+              [_vm._v("Europe/Luxembourg")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Madrid" } },
+              [_vm._v("Europe/Madrid")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Malta" } },
+              [_vm._v("Europe/Malta")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Mariehamn" } },
+              [_vm._v("Europe/Mariehamn")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Minsk" } },
+              [_vm._v("Europe/Minsk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Monaco" } },
+              [_vm._v("Europe/Monaco")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Moscow" } },
+              [_vm._v("Europe/Moscow")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Oslo" } },
+              [_vm._v("Europe/Oslo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Paris" } },
+              [_vm._v("Europe/Paris")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Podgorica" } },
+              [_vm._v("Europe/Podgorica")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Prague" } },
+              [_vm._v("Europe/Prague")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Riga" } },
+              [_vm._v("Europe/Riga")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Rome" } },
+              [_vm._v("Europe/Rome")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Samara" } },
+              [_vm._v("Europe/Samara")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/San_Marino" } },
+              [_vm._v("Europe/San Marino")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Sarajevo" } },
+              [_vm._v("Europe/Sarajevo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Saratov" } },
+              [_vm._v("Europe/Saratov")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Simferopol" } },
+              [_vm._v("Europe/Simferopol")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Skopje" } },
+              [_vm._v("Europe/Skopje")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Sofia" } },
+              [_vm._v("Europe/Sofia")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Stockholm" } },
+              [_vm._v("Europe/Stockholm")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Tallinn" } },
+              [_vm._v("Europe/Tallinn")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Tirane" } },
+              [_vm._v("Europe/Tirane")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Ulyanovsk" } },
+              [_vm._v("Europe/Ulyanovsk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Uzhgorod" } },
+              [_vm._v("Europe/Uzhgorod")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Vaduz" } },
+              [_vm._v("Europe/Vaduz")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Vatican" } },
+              [_vm._v("Europe/Vatican")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Vienna" } },
+              [_vm._v("Europe/Vienna")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Vilnius" } },
+              [_vm._v("Europe/Vilnius")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Volgograd" } },
+              [_vm._v("Europe/Volgograd")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Warsaw" } },
+              [_vm._v("Europe/Warsaw")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Zagreb" } },
+              [_vm._v("Europe/Zagreb")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Zaporozhye" } },
+              [_vm._v("Europe/Zaporozhye")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Europe/Zurich" } },
+              [_vm._v("Europe/Zurich")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Indian/Antananarivo" } },
+              [_vm._v("Indian/Antananarivo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Indian/Chagos" } },
+              [_vm._v("Indian/Chagos")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Indian/Christmas" } },
+              [_vm._v("Indian/Christmas")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Indian/Cocos" } },
+              [_vm._v("Indian/Cocos")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Indian/Comoro" } },
+              [_vm._v("Indian/Comoro")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Indian/Kerguelen" } },
+              [_vm._v("Indian/Kerguelen")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Indian/Mahe" } },
+              [_vm._v("Indian/Mahe")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Indian/Maldives" } },
+              [_vm._v("Indian/Maldives")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Indian/Mauritius" } },
+              [_vm._v("Indian/Mauritius")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Indian/Mayotte" } },
+              [_vm._v("Indian/Mayotte")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Indian/Reunion" } },
+              [_vm._v("Indian/Reunion")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Apia" } },
+              [_vm._v("Pacific/Apia")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Auckland" } },
+              [_vm._v("Pacific/Auckland")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Bougainville" } },
+              [_vm._v("Pacific/Bougainville")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Chatham" } },
+              [_vm._v("Pacific/Chatham")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Chuuk" } },
+              [_vm._v("Pacific/Chuuk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Easter" } },
+              [_vm._v("Pacific/Easter")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Efate" } },
+              [_vm._v("Pacific/Efate")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Enderbury" } },
+              [_vm._v("Pacific/Enderbury")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Fakaofo" } },
+              [_vm._v("Pacific/Fakaofo")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Fiji" } },
+              [_vm._v("Pacific/Fiji")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Funafuti" } },
+              [_vm._v("Pacific/Funafuti")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Galapagos" } },
+              [_vm._v("Pacific/Galapagos")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Gambier" } },
+              [_vm._v("Pacific/Gambier")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Guadalcanal" } },
+              [_vm._v("Pacific/Guadalcanal")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Guam" } },
+              [_vm._v("Pacific/Guam")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Honolulu" } },
+              [_vm._v("Pacific/Honolulu")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Kiritimati" } },
+              [_vm._v("Pacific/Kiritimati")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Kosrae" } },
+              [_vm._v("Pacific/Kosrae")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Kwajalein" } },
+              [_vm._v("Pacific/Kwajalein")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Majuro" } },
+              [_vm._v("Pacific/Majuro")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Marquesas" } },
+              [_vm._v("Pacific/Marquesas")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Midway" } },
+              [_vm._v("Pacific/Midway")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Nauru" } },
+              [_vm._v("Pacific/Nauru")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Niue" } },
+              [_vm._v("Pacific/Niue")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Norfolk" } },
+              [_vm._v("Pacific/Norfolk")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Noumea" } },
+              [_vm._v("Pacific/Noumea")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Pago_Pago" } },
+              [_vm._v("Pacific/Pago Pago")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Palau" } },
+              [_vm._v("Pacific/Palau")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Pitcairn" } },
+              [_vm._v("Pacific/Pitcairn")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Pohnpei" } },
+              [_vm._v("Pacific/Pohnpei")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Port_Moresby" } },
+              [_vm._v("Pacific/Port Moresby")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Rarotonga" } },
+              [_vm._v("Pacific/Rarotonga")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Saipan" } },
+              [_vm._v("Pacific/Saipan")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Tahiti" } },
+              [_vm._v("Pacific/Tahiti")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Tarawa" } },
+              [_vm._v("Pacific/Tarawa")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Tongatapu" } },
+              [_vm._v("Pacific/Tongatapu")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Wake" } },
+              [_vm._v("Pacific/Wake")]
+            ),
+            _vm._v(" "),
+            _c(
+              "option",
+              { staticClass: "t-c", attrs: { value: "Pacific/Wallis" } },
+              [_vm._v("Pacific/Wallis")]
+            )
+          ]
+        ),
+        _c("br"),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn-dark t-c rounded-lg mt-2",
+            attrs: { id: "submit", type: "submit" }
+          },
+          [_vm._v("Timestamp to Timezone")]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _vm.response
+      ? _c("div", { staticClass: "result-box mt-3" }, [
+          _c("p", [
+            _c("b", [_vm._v("Date")]),
+            _vm._v(" : " + _vm._s(_vm.info.date) + " ")
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _c("b", [_vm._v("Timezone")]),
+            _vm._v(": " + _vm._s(_vm.info.timezone.timezone))
+          ]),
+          _vm._v(" "),
+          _c("p", [
+            _c("b", [_vm._v("Offset")]),
+            _vm._v(" : " + _vm._s(_vm.info.offset))
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.error
+      ? _c("div", { staticClass: "error-box mt-3" }, [
+          _c("p", [_vm._v("Sorry, this timestamp is not valid.")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v("Check your timestamp, strip letters and punctuation marks.")
+          ])
+        ])
+      : _vm._e()
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneList.vue?vue&type=template&id=66663906&scoped=true&":
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Homepage/TimezoneList.vue?vue&type=template&id=66663906&scoped=true& ***!
+  \************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", [
+      _c("select", { staticClass: "t-l shadow-sm ml-2 pt-0 rounded" }, [
+        _c("option", { staticClass: "t-c", attrs: { value: "GMT" } }, [
+          _vm._v("GMT")
+        ]),
+        _vm._v(" "),
+        _c("option", { staticClass: "t-c", attrs: { value: "Asia/Kolkata" } }, [
+          _vm._v("Asia/Kolkata")
+        ])
+      ]),
+      _c("br")
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Preferences/PrefBody.vue?vue&type=template&id=e5fc12b2&scoped=true&":
 /*!***********************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Preferences/PrefBody.vue?vue&type=template&id=e5fc12b2&scoped=true& ***!
@@ -41059,17 +44535,19 @@ var render = function() {
     _c(
       "div",
       { staticClass: "col-sm-8 content ml-1 mr-1" },
-        [
-            _c("date-to-epoch", {staticClass: "r1"}),
-            _vm._v(" "),
-            _c("human-date-to-epoch", {staticClass: "r1"}),
-            _vm._v(" "),
-            _c("epoch-to-human", {staticClass: "r2"}),
-            _vm._v(" "),
-            _c("begin-end", {staticClass: "r3"}),
-            _vm._v(" "),
-            _c("pref-form", {staticClass: "r4"})
-        ],
+      [
+        _c("date-to-epoch", { staticClass: "r1" }),
+        _vm._v(" "),
+        _c("human-date-to-epoch", { staticClass: "r1" }),
+        _vm._v(" "),
+        _c("epoch-to-human", { staticClass: "r2" }),
+        _vm._v(" "),
+        _c("begin-end", { staticClass: "r3" }),
+        _vm._v(" "),
+        _c("tz-converter", { staticClass: "r4" }),
+        _vm._v(" "),
+        _c("pref-form", { staticClass: "r5" })
+      ],
       1
     )
   ])
@@ -41085,13 +44563,13 @@ var staticRenderFns = [
       [
         _c("div", { staticClass: "shadow-sm rounded" }, [
           _c("a", { staticClass: "t1", attrs: { href: "/" } }, [
-              _vm._v(" Date to Timestamp Converter")
+            _vm._v(" Date to Timestamp Converter")
           ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "shadow-sm rounded" }, [
           _c("a", { staticClass: "t2" }, [
-              _vm._v(" Timestamp to Date Converter")
+            _vm._v(" Timestamp to Date Converter")
           ])
         ]),
         _vm._v(" "),
@@ -41100,9 +44578,13 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "shadow-sm rounded" }, [
+          _c("a", { staticClass: "t4" }, [_vm._v("Timezone Converter")])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "shadow-sm rounded" }, [
           _c(
             "a",
-            { staticClass: "active t4", attrs: { href: "/preferences" } },
+            { staticClass: "t5 active", attrs: { href: "/preferences" } },
             [_vm._v("Preferences")]
           )
         ])
@@ -53486,6 +56968,8 @@ Vue.component('begin-end', __webpack_require__(/*! ./components/Homepage/BeginEn
 Vue.component('menu-list', __webpack_require__(/*! ./components/Homepage/MenuList.vue */ "./resources/js/components/Homepage/MenuList.vue")["default"]);
 Vue.component('main-body', __webpack_require__(/*! ./components/Homepage/MainBody.vue */ "./resources/js/components/Homepage/MainBody.vue")["default"]);
 Vue.component('footer-main', __webpack_require__(/*! ./components/Homepage/Footer.vue */ "./resources/js/components/Homepage/Footer.vue")["default"]);
+Vue.component('tz-converter', __webpack_require__(/*! ./components/Homepage/TimezoneConverter.vue */ "./resources/js/components/Homepage/TimezoneConverter.vue")["default"]);
+Vue.component('tz-list', __webpack_require__(/*! ./components/Homepage/TimezoneList.vue */ "./resources/js/components/Homepage/TimezoneList.vue")["default"]);
 Vue.component('pref-form', __webpack_require__(/*! ./components/Preferences/PreferenceForm.vue */ "./resources/js/components/Preferences/PreferenceForm.vue")["default"]);
 Vue.component('pref-body', __webpack_require__(/*! ./components/Preferences/PrefBody.vue */ "./resources/js/components/Preferences/PrefBody.vue")["default"]);
 Vue.mixin('setPref', __webpack_require__(/*! ./mixins/SetPreference.js */ "./resources/js/mixins/SetPreference.js")["default"]);
@@ -53575,7 +57059,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   "970095f4",
   null
-
+  
 )
 
 /* hot reload */
@@ -53592,15 +57076,12 @@ component.options.__file = "resources/js/components/Homepage/BeginEndDate.vue"
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony import */
-            var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BeginEndDate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./BeginEndDate.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/BeginEndDate.vue?vue&type=script&lang=js&");
-            /* empty/unused harmony star reexport */ /* harmony default export */
-            __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BeginEndDate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BeginEndDate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./BeginEndDate.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/BeginEndDate.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_BeginEndDate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
-            /***/
-        }),
+/***/ }),
 
 /***/ "./resources/js/components/Homepage/BeginEndDate.vue?vue&type=style&index=0&id=970095f4&scoped=true&lang=css&":
 /*!********************************************************************************************************************!*\
@@ -53665,7 +57146,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   "3a3673ea",
   null
-
+  
 )
 
 /* hot reload */
@@ -53682,15 +57163,12 @@ component.options.__file = "resources/js/components/Homepage/DateToEpoch.vue"
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony import */
-            var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DateToEpoch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./DateToEpoch.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/DateToEpoch.vue?vue&type=script&lang=js&");
-            /* empty/unused harmony star reexport */ /* harmony default export */
-            __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DateToEpoch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DateToEpoch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./DateToEpoch.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/DateToEpoch.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DateToEpoch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
-            /***/
-        }),
+/***/ }),
 
 /***/ "./resources/js/components/Homepage/DateToEpoch.vue?vue&type=style&index=0&id=3a3673ea&scoped=true&lang=css&":
 /*!*******************************************************************************************************************!*\
@@ -53755,7 +57233,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   "328008ef",
   null
-
+  
 )
 
 /* hot reload */
@@ -53772,15 +57250,12 @@ component.options.__file = "resources/js/components/Homepage/EpochToHuman.vue"
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony import */
-            var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EpochToHuman_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./EpochToHuman.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/EpochToHuman.vue?vue&type=script&lang=js&");
-            /* empty/unused harmony star reexport */ /* harmony default export */
-            __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EpochToHuman_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EpochToHuman_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./EpochToHuman.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/EpochToHuman.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_EpochToHuman_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
-            /***/
-        }),
+/***/ }),
 
 /***/ "./resources/js/components/Homepage/EpochToHuman.vue?vue&type=style&index=0&id=328008ef&scoped=true&lang=css&":
 /*!********************************************************************************************************************!*\
@@ -53845,7 +57320,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   "55c48d3e",
   null
-
+  
 )
 
 /* hot reload */
@@ -53862,15 +57337,12 @@ component.options.__file = "resources/js/components/Homepage/Footer.vue"
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony import */
-            var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Footer.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/Footer.vue?vue&type=script&lang=js&");
-            /* empty/unused harmony star reexport */ /* harmony default export */
-            __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Footer.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/Footer.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
-            /***/
-        }),
+/***/ }),
 
 /***/ "./resources/js/components/Homepage/Footer.vue?vue&type=style&index=0&id=55c48d3e&scoped=true&lang=css&":
 /*!**************************************************************************************************************!*\
@@ -53935,7 +57407,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   "135fc55a",
   null
-
+  
 )
 
 /* hot reload */
@@ -53952,15 +57424,12 @@ component.options.__file = "resources/js/components/Homepage/Header.vue"
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony import */
-            var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Header_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Header.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/Header.vue?vue&type=script&lang=js&");
-            /* empty/unused harmony star reexport */ /* harmony default export */
-            __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Header_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Header_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./Header.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/Header.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Header_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
-            /***/
-        }),
+/***/ }),
 
 /***/ "./resources/js/components/Homepage/Header.vue?vue&type=style&index=0&id=135fc55a&scoped=true&lang=css&":
 /*!**************************************************************************************************************!*\
@@ -54025,7 +57494,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   "65d909ab",
   null
-
+  
 )
 
 /* hot reload */
@@ -54042,15 +57511,12 @@ component.options.__file = "resources/js/components/Homepage/HeaderClock.vue"
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony import */
-            var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderClock_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./HeaderClock.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/HeaderClock.vue?vue&type=script&lang=js&");
-            /* empty/unused harmony star reexport */ /* harmony default export */
-            __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderClock_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderClock_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./HeaderClock.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/HeaderClock.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HeaderClock_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
-            /***/
-        }),
+/***/ }),
 
 /***/ "./resources/js/components/Homepage/HeaderClock.vue?vue&type=style&index=0&id=65d909ab&scoped=true&lang=css&":
 /*!*******************************************************************************************************************!*\
@@ -54115,6 +57581,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   "2028da19",
   null
+  
 )
 
 /* hot reload */
@@ -54131,15 +57598,12 @@ component.options.__file = "resources/js/components/Homepage/HumanDateToEpoch.vu
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony import */
-            var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HumanDateToEpoch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./HumanDateToEpoch.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/HumanDateToEpoch.vue?vue&type=script&lang=js&");
-            /* empty/unused harmony star reexport */ /* harmony default export */
-            __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HumanDateToEpoch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HumanDateToEpoch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./HumanDateToEpoch.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/HumanDateToEpoch.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_HumanDateToEpoch_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
-            /***/
-        }),
+/***/ }),
 
 /***/ "./resources/js/components/Homepage/HumanDateToEpoch.vue?vue&type=style&index=0&id=2028da19&scoped=true&lang=css&":
 /*!************************************************************************************************************************!*\
@@ -54204,6 +57668,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   "6c4f8f41",
   null
+  
 )
 
 /* hot reload */
@@ -54220,15 +57685,12 @@ component.options.__file = "resources/js/components/Homepage/MainBody.vue"
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony import */
-            var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MainBody_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./MainBody.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/MainBody.vue?vue&type=script&lang=js&");
-            /* empty/unused harmony star reexport */ /* harmony default export */
-            __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MainBody_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MainBody_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./MainBody.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/MainBody.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MainBody_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
-            /***/
-        }),
+/***/ }),
 
 /***/ "./resources/js/components/Homepage/MainBody.vue?vue&type=style&index=0&id=6c4f8f41&scoped=true&lang=css&":
 /*!****************************************************************************************************************!*\
@@ -54293,6 +57755,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   "7de931e3",
   null
+  
 )
 
 /* hot reload */
@@ -54309,15 +57772,12 @@ component.options.__file = "resources/js/components/Homepage/MenuList.vue"
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony import */
-            var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MenuList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./MenuList.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/MenuList.vue?vue&type=script&lang=js&");
-            /* empty/unused harmony star reexport */ /* harmony default export */
-            __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MenuList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MenuList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./MenuList.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/MenuList.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_MenuList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
-            /***/
-        }),
+/***/ }),
 
 /***/ "./resources/js/components/Homepage/MenuList.vue?vue&type=style&index=0&id=7de931e3&scoped=true&lang=css&":
 /*!****************************************************************************************************************!*\
@@ -54382,6 +57842,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   "51ef1594",
   null
+  
 )
 
 /* hot reload */
@@ -54398,15 +57859,12 @@ component.options.__file = "resources/js/components/Homepage/NavBar.vue"
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony import */
-            var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NavBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./NavBar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/NavBar.vue?vue&type=script&lang=js&");
-            /* empty/unused harmony star reexport */ /* harmony default export */
-            __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NavBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NavBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./NavBar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/NavBar.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_NavBar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
-            /***/
-        }),
+/***/ }),
 
 /***/ "./resources/js/components/Homepage/NavBar.vue?vue&type=style&index=0&id=51ef1594&scoped=true&lang=css&":
 /*!**************************************************************************************************************!*\
@@ -54442,6 +57900,180 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Homepage/TimezoneConverter.vue":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/Homepage/TimezoneConverter.vue ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TimezoneConverter_vue_vue_type_template_id_5c66e151_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TimezoneConverter.vue?vue&type=template&id=5c66e151&scoped=true& */ "./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=template&id=5c66e151&scoped=true&");
+/* harmony import */ var _TimezoneConverter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TimezoneConverter.vue?vue&type=script&lang=js& */ "./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _TimezoneConverter_vue_vue_type_style_index_0_id_5c66e151_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TimezoneConverter.vue?vue&type=style&index=0&id=5c66e151&scoped=true&lang=css& */ "./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=style&index=0&id=5c66e151&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _TimezoneConverter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _TimezoneConverter_vue_vue_type_template_id_5c66e151_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _TimezoneConverter_vue_vue_type_template_id_5c66e151_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "5c66e151",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Homepage/TimezoneConverter.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneConverter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./TimezoneConverter.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneConverter_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=style&index=0&id=5c66e151&scoped=true&lang=css&":
+/*!*************************************************************************************************************************!*\
+  !*** ./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=style&index=0&id=5c66e151&scoped=true&lang=css& ***!
+  \*************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneConverter_vue_vue_type_style_index_0_id_5c66e151_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./TimezoneConverter.vue?vue&type=style&index=0&id=5c66e151&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=style&index=0&id=5c66e151&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneConverter_vue_vue_type_style_index_0_id_5c66e151_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneConverter_vue_vue_type_style_index_0_id_5c66e151_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneConverter_vue_vue_type_style_index_0_id_5c66e151_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneConverter_vue_vue_type_style_index_0_id_5c66e151_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=template&id=5c66e151&scoped=true&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=template&id=5c66e151&scoped=true& ***!
+  \***********************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneConverter_vue_vue_type_template_id_5c66e151_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./TimezoneConverter.vue?vue&type=template&id=5c66e151&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneConverter.vue?vue&type=template&id=5c66e151&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneConverter_vue_vue_type_template_id_5c66e151_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneConverter_vue_vue_type_template_id_5c66e151_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Homepage/TimezoneList.vue":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/Homepage/TimezoneList.vue ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _TimezoneList_vue_vue_type_template_id_66663906_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TimezoneList.vue?vue&type=template&id=66663906&scoped=true& */ "./resources/js/components/Homepage/TimezoneList.vue?vue&type=template&id=66663906&scoped=true&");
+/* harmony import */ var _TimezoneList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./TimezoneList.vue?vue&type=script&lang=js& */ "./resources/js/components/Homepage/TimezoneList.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _TimezoneList_vue_vue_type_style_index_0_id_66663906_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TimezoneList.vue?vue&type=style&index=0&id=66663906&scoped=true&lang=css& */ "./resources/js/components/Homepage/TimezoneList.vue?vue&type=style&index=0&id=66663906&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _TimezoneList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _TimezoneList_vue_vue_type_template_id_66663906_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _TimezoneList_vue_vue_type_template_id_66663906_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "66663906",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Homepage/TimezoneList.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Homepage/TimezoneList.vue?vue&type=script&lang=js&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/Homepage/TimezoneList.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./TimezoneList.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneList.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneList_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Homepage/TimezoneList.vue?vue&type=style&index=0&id=66663906&scoped=true&lang=css&":
+/*!********************************************************************************************************************!*\
+  !*** ./resources/js/components/Homepage/TimezoneList.vue?vue&type=style&index=0&id=66663906&scoped=true&lang=css& ***!
+  \********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneList_vue_vue_type_style_index_0_id_66663906_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/style-loader!../../../../node_modules/css-loader??ref--6-1!../../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../../node_modules/postcss-loader/src??ref--6-2!../../../../node_modules/vue-loader/lib??vue-loader-options!./TimezoneList.vue?vue&type=style&index=0&id=66663906&scoped=true&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneList.vue?vue&type=style&index=0&id=66663906&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneList_vue_vue_type_style_index_0_id_66663906_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneList_vue_vue_type_style_index_0_id_66663906_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneList_vue_vue_type_style_index_0_id_66663906_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_6_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_6_2_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneList_vue_vue_type_style_index_0_id_66663906_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Homepage/TimezoneList.vue?vue&type=template&id=66663906&scoped=true&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/components/Homepage/TimezoneList.vue?vue&type=template&id=66663906&scoped=true& ***!
+  \******************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneList_vue_vue_type_template_id_66663906_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./TimezoneList.vue?vue&type=template&id=66663906&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Homepage/TimezoneList.vue?vue&type=template&id=66663906&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneList_vue_vue_type_template_id_66663906_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_TimezoneList_vue_vue_type_template_id_66663906_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/components/Preferences/PrefBody.vue":
 /*!**********************************************************!*\
   !*** ./resources/js/components/Preferences/PrefBody.vue ***!
@@ -54471,6 +58103,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   "e5fc12b2",
   null
+  
 )
 
 /* hot reload */
@@ -54487,15 +58120,12 @@ component.options.__file = "resources/js/components/Preferences/PrefBody.vue"
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony import */
-            var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PrefBody_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./PrefBody.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Preferences/PrefBody.vue?vue&type=script&lang=js&");
-            /* empty/unused harmony star reexport */ /* harmony default export */
-            __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PrefBody_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PrefBody_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./PrefBody.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Preferences/PrefBody.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PrefBody_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
-            /***/
-        }),
+/***/ }),
 
 /***/ "./resources/js/components/Preferences/PrefBody.vue?vue&type=style&index=0&id=e5fc12b2&scoped=true&lang=css&":
 /*!*******************************************************************************************************************!*\
@@ -54560,6 +58190,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   "cfe9f7fe",
   null
+  
 )
 
 /* hot reload */
@@ -54576,15 +58207,12 @@ component.options.__file = "resources/js/components/Preferences/PreferenceForm.v
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-            "use strict";
-            __webpack_require__.r(__webpack_exports__);
-            /* harmony import */
-            var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PreferenceForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./PreferenceForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Preferences/PreferenceForm.vue?vue&type=script&lang=js&");
-            /* empty/unused harmony star reexport */ /* harmony default export */
-            __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PreferenceForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PreferenceForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./PreferenceForm.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Preferences/PreferenceForm.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_PreferenceForm_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
-            /***/
-        }),
+/***/ }),
 
 /***/ "./resources/js/components/Preferences/PreferenceForm.vue?vue&type=style&index=0&id=cfe9f7fe&scoped=true&lang=css&":
 /*!*************************************************************************************************************************!*\

@@ -127,4 +127,15 @@ class EpochRepository extends EloquentBaseRepository
             ]
         ];
     }
+
+    public function getDateForTimezone($data)
+    {
+        $timeStamp = $data['data']['timestamp'];
+        $tz = $data['data']['timezone'];
+        return [
+            'date' => Carbon::createFromTimestamp($timeStamp, $tz)->toCookieString(),
+            'timezone' => Carbon::createFromTimestamp($timeStamp, $tz)->gettimezone(),
+            'offset' => Carbon::createFromTimestamp($timeStamp, $tz)->getOffsetString()
+        ];
+    }
 }
